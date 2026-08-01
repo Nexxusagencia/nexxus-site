@@ -1,0 +1,23 @@
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Bytecode & Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# System & IDE Caches
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.gemini/
+
+# Backups & Archives
+*.zip
+_archive/
+scratch_backup/

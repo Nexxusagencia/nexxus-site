@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Solicite um Diagnóstico Comercial B2B | Nexxus</title>
+  <meta name="description" content="Entre em contato com a Nexxus e solicite um diagnóstico para estruturar, operar ou desenvolver a área comercial da sua empresa. Atendimento consultivo e resposta em até 12 horas.">
+  <meta name="keywords" content="contato nexxus, diagnóstico comercial, suporte comercial, terceirização comercial, estruturação de vendas, consultoria comercial São Paulo">
+  <meta name="author" content="Nexxus Agência Comercial">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://nexxusagencia.com.br/contato">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Nexxus">
+  <meta property="og:title" content="Contato | Solicite um Diagnóstico Comercial B2B | Nexxus">
+  <meta property="og:description" content="Entre em contato com a Nexxus e solicite um diagnóstico para estruturar, operar ou desenvolver a área comercial da sua empresa. Atendimento consultivo e resposta em até 12 horas.">
+  <meta property="og:image" content="https://nexxusagencia.com.br/og-image.jpg">
+
+  <!-- Google Fonts: Oswald (Headings), Plus Jakarta Sans / Nexa Fallback (Body), JetBrains Mono (Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Iconify Icons CDN -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            sans: ['Nexa', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            nexxus: {
+              bg: '#020611',
+              card: '#080E20',
+              glass: 'rgba(9, 16, 36, 0.75)',
+              border: 'rgba(1, 117, 239, 0.15)',
+              blue: {
+                DEFAULT: '#0175ef',
+                300: '#60a5fa',
+                400: '#3b82f6',
+                500: '#0175ef',
+                600: '#1d4ed8',
+                700: '#1e40af',
+                glow: 'rgba(1, 117, 239, 0.35)'
+              },
+              mint: {
+                DEFAULT: '#25c9b5',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#25c9b5',
+                600: '#0d9488',
+                glow: 'rgba(37, 201, 181, 0.35)'
+              }
+            }
+          },
+          boxShadow: {
+            'glow-blue': '0 0 25px rgba(1, 117, 239, 0.35)',
+            'glow-mint': '0 0 25px rgba(37, 201, 181, 0.35)',
+            'glass-inset': 'inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 20px 40px -10px rgba(0,0,0,0.8)',
+            'btn-blue': '0 10px 25px -5px rgba(1, 117, 239, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 5px rgba(29, 78, 216, 0.8)',
+            'btn-mint': '0 10px 25px -5px rgba(37, 201, 181, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 5px rgba(13, 148, 136, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <style>
+    @font-face {
+      font-family: 'Nexa';
+      src: local('Nexa Bold'), local('Nexa Light'), local('Plus Jakarta Sans');
+    }
+
+    body {
+      background-color: #020611;
+      color: #93C5FD;
+      font-family: 'Nexa', 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, .main-title, .title-bold {
+      font-family: 'Oswald', sans-serif !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      line-height: 1.25 !important;
+      color: #FFFFFF;
+    }
+
+    h3, h4, h5, h6, .card-title, .subtitle, .section-subtitle {
+      font-family: 'Oswald', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      line-height: 1.25 !important;
+      color: #FFFFFF;
+    }
+
+    .highlight-blue {
+      color: #0175ef !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020611; }
+    ::-webkit-scrollbar-thumb { background: #1E3A8A; border-radius: 4px; border: 2px solid #020611; }
+    ::-webkit-scrollbar-thumb:hover { background: #0175ef; }
+
+    /* Grain Overlay Texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* Glass Effect Utilities */
+    .glass-card {
+      background: rgba(8, 14, 32, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(1, 117, 239, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .glass-card-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card-hover:hover {
+      border-color: rgba(1, 117, 239, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 45px rgba(1, 117, 239, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Bento Corner Bracket Accents */
+    .bc-corner {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      z-index: 4;
+      pointer-events: none;
+    }
+    .bc-corner::before, .bc-corner::after {
+      content: '';
+      position: absolute;
+      background: rgba(1, 117, 239, 0.4);
+    }
+    .bc-corner::before { width: 12px; height: 1px; }
+    .bc-corner::after { width: 1px; height: 12px; }
+    .bc-corner-tl { top: 8px; left: 8px; }
+    .bc-corner-tl::before { top: 0; left: 0; }
+    .bc-corner-tl::after { top: 0; left: 0; }
+    .bc-corner-br { bottom: 8px; right: 8px; }
+    .bc-corner-br::before { bottom: 0; right: 0; }
+    .bc-corner-br::after { bottom: 0; right: 0; }
+
+    /* 100% Universal Glitch-Free Border Beam Animation */
+    .btn-conic-spin {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: #050b1e;
+      color: #FFFFFF;
+      font-weight: 600;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 0;
+      isolation: isolate;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-conic-spin::before {
+      content: '';
+      position: absolute;
+      top: -250%;
+      left: -250%;
+      width: 600%;
+      height: 600%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(1, 117, 239, 0.05) 0deg,
+        rgba(1, 117, 239, 0.05) 180deg,
+        #0175ef 250deg,
+        #25c9b5 320deg,
+        rgba(1, 117, 239, 0.05) 360deg
+      );
+      z-index: -2;
+      animation: spin-conic-universal 4s linear infinite;
+      transform-origin: center center;
+    }
+
+    .btn-conic-spin::after {
+      content: '';
+      position: absolute;
+      inset: 1.5px;
+      border-radius: 9999px;
+      background: #050b1e;
+      z-index: -1;
+      transition: background 0.3s ease;
+    }
+
+    .btn-conic-spin:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(1, 117, 239, 0.4), 0 0 12px rgba(37, 201, 181, 0.3);
+    }
+
+    .btn-conic-spin:hover::after {
+      background: #08112d;
+    }
+
+    .btn-conic-spin:active {
+      transform: translateY(0) scale(0.97);
+    }
+
+    @keyframes spin-conic-universal {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Form Fields Styling */
+    .form-input {
+      width: 100%;
+      background: rgba(4, 9, 24, 0.85);
+      border: 1px solid rgba(1, 117, 239, 0.25);
+      border-radius: 12px;
+      padding: 12px 16px;
+      color: #FFFFFF;
+      font-size: 0.875rem;
+      transition: all 0.25s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #0175ef;
+      box-shadow: 0 0 15px rgba(1, 117, 239, 0.3);
+      background: rgba(8, 16, 40, 0.95);
+    }
+    .form-input::placeholder {
+      color: #64748B;
+    }
+    .form-input.input-error {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 12px rgba(239, 68, 68, 0.35) !important;
+    }
+
+    /* Scroll Reveal with Blur */
+    .reveal {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateY(20px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    /* Custom Cursor Trail */
+    @media (pointer: fine) {
+      html, body, a, button, input, select, textarea, [role="button"], .glass-card {
+        cursor: none !important;
+      }
+    }
+    #cursor-dot {
+      position: fixed; top: 0; left: 0;
+      width: 8px; height: 8px;
+      background-color: #25c9b5;
+      border-radius: 50%; pointer-events: none; z-index: 9999;
+      box-shadow: 0 0 12px #25c9b5, 0 0 25px #0175ef;
+      transform: translate3d(-50%, -50%, 0);
+      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+    }
+    #cursor-ring {
+      position: fixed; top: 0; left: 0;
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(1, 117, 239, 0.6);
+      border-radius: 50%; pointer-events: none; z-index: 9998;
+      transform: translate3d(-50%, -50%, 0);
+      transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out, opacity 0.2s ease;
+      box-shadow: 0 0 15px rgba(1, 117, 239, 0.2);
+    }
+    #cursor-arrow {
+      position: fixed; top: 0; left: 0;
+      width: 26px; height: 26px;
+      pointer-events: none; z-index: 10001;
+      opacity: 0;
+      transform: translate3d(-50%, -50%, 0) scale(0.3) rotate(-20deg);
+      transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      filter: drop-shadow(0 0 10px rgba(1, 117, 239, 0.9)) drop-shadow(0 0 18px rgba(37, 201, 181, 0.6));
+    }
+    #cursor-arrow.active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    }
+    #cursor-dot.menu-hover,
+    #cursor-ring.menu-hover {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen antialiased selection:bg-nexxus-blue-500/30 selection:text-white">
+  <!-- Custom Interactive Cursor Trail -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-arrow">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 2L20 11L11.5 13.5L8.5 21L3 2Z" fill="url(#arrowGrad)" stroke="#25c9b5" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M5.5 5.5L15.5 10.8L10.5 12.2L8.5 17L5.5 5.5Z" fill="#FFFFFF" opacity="0.6"/>
+      <defs>
+        <linearGradient id="arrowGrad" x1="3" y1="2" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#0175ef"/>
+          <stop offset="1" stop-color="#25c9b5"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Interactive WebGL Canvas Shader Background -->
+  <canvas id="webgl-stars" class="fixed inset-0 z-0 pointer-events-none opacity-60"></canvas>
+  <div class="fixed inset-0 opacity-[0.04] pointer-events-none z-50 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed top-[-15%] left-[20%] -translate-x-1/2 w-[600px] h-[350px] bg-nexxus-blue-500/10 blur-[160px] rounded-full pointer-events-none z-0"></div>
+  <div class="fixed top-[50%] right-[-10%] w-[500px] h-[300px] bg-nexxus-blue-600/08 blur-[160px] rounded-full pointer-events-none z-0"></div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- HEADER STICKY NAV -->
+    <header class="sticky top-4 z-50 px-3 md:px-8 max-w-7xl mx-auto w-full">
+      <nav class="glass-card rounded-full px-4 md:px-6 py-3.5 flex items-center justify-between shadow-2xl relative whitespace-nowrap">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3 shrink-0 mr-4 xl:mr-8">
+          <a href="index-nexxus.html" class="flex items-center gap-2.5 whitespace-nowrap">
+            <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 sm:h-8 w-auto select-none">
+          </a>
+          <span class="hidden md:inline-block text-slate-600">|</span>
+          <span class="hidden md:inline-block text-xs font-mono text-slate-400 font-medium">Contato</span>
+        </div>
+
+        <!-- Links Internos -->
+        <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-gray-300 whitespace-nowrap shrink-0 mr-2 xl:mr-4">
+          <a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors flex items-center gap-1.5">
+            <iconify-icon icon="solar:home-2-bold" class="text-sm text-nexxus-blue-400"></iconify-icon>
+            Início
+          </a>
+          <a href="sobre-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre</a>
+          <a href="servicos-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a>
+          <a href="#formulario" class="hover:text-nexxus-blue-400 transition-colors">Formulário</a>
+          <a href="#canais" class="hover:text-nexxus-blue-400 transition-colors">Canais</a>
+          <a href="#localizacao" class="hover:text-nexxus-blue-400 transition-colors">Localização</a>
+          <a href="#faq-contato" class="hover:text-nexxus-blue-400 transition-colors">FAQ</a>
+        </div>
+
+        <!-- Botões CTA -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button onclick="openRoiModal()" class="btn-conic-spin text-xs uppercase tracking-wider px-5 py-2.5">
+            <span class="relative z-10 flex items-center gap-2 font-bold text-white">
+              <iconify-icon icon="solar:calculator-bold-duotone" class="text-nexxus-mint-400 text-sm"></iconify-icon>
+              <span>Simulador ROI</span>
+            </span>
+          </button>
+        </div>
+
+      </nav>
+    </header>
+
+    <main class="flex-1 space-y-16 md:space-y-24 py-8">
+
+      <!-- SEÇÃO 1: HERO DE CONTATO -->
+      <section id="hero" class="relative px-4 md:px-8 max-w-7xl mx-auto w-full pt-8 md:pt-12 reveal">
+        <div class="text-center max-w-4xl mx-auto space-y-6">
+          
+          <!-- Breadcrumb Navigation -->
+          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400">
+            <a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Home</a>
+            <span class="text-slate-600">/</span>
+            <span class="text-nexxus-blue-400 font-semibold">Contato</span>
+          </nav>
+
+          <div class="block">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-xs font-mono text-nexxus-blue-400 font-bold uppercase tracking-wider">
+              Atendimento Consultivo · Resposta em até 12 Horas
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white uppercase leading-tight max-w-4xl mx-auto">
+            Vamos Conversar Sobre a <span class="highlight-blue">Operação Comercial da Sua Empresa</span>?
+          </h1>
+
+          <p class="text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+            Preencha o formulário abaixo ou entre em contato diretamente com nossa equipe. Realizamos um diagnóstico comercial sem compromisso para identificar gargalos e recomendar a solução ideal.
+          </p>
+
+        </div>
+      </section>
+
+      <!-- SEÇÃO 2: ÁREA PRINCIPAL & FORMULÁRIO (id="formulario") -->
+      <section id="formulario" class="scroll-mt-28 px-4 md:px-8 max-w-6xl mx-auto w-full reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- COLUNA ESQUERDA: FORMULÁRIO EM DESTAQUE -->
+          <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-10 border border-nexxus-blue-500/30 relative shadow-2xl">
+            <div class="bc-corner bc-corner-tl"></div><div class="bc-corner bc-corner-br"></div>
+
+            <div class="space-y-6">
+              <div>
+                <span class="text-xs font-mono text-nexxus-mint-400 uppercase font-bold tracking-wider">Diagnóstico Gratuito</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white uppercase font-heading mt-1">Solicitar Atendimento Consultivo</h2>
+                <p class="text-xs sm:text-sm text-slate-300 font-light mt-1">Preencha os campos abaixo para que nossos especialistas analisem sua empresa.</p>
+              </div>
+
+              <!-- Mensagem de Demonstração do Formulário -->
+              <div id="form-success-alert" class="hidden p-5 rounded-2xl bg-nexxus-mint-500/15 border border-nexxus-mint-400/40 text-left space-y-2">
+                <div class="flex items-center gap-2.5 text-nexxus-mint-300 font-bold text-sm font-heading">
+                  <iconify-icon icon="solar:check-circle-bold" class="text-xl text-nexxus-mint-400"></iconify-icon>
+                  <span>Validação de Demonstração</span>
+                </div>
+                <p id="form-success-text" class="text-xs text-slate-200 font-light leading-relaxed">
+                  Formulário preenchido com sucesso. O envio real será ativado após a publicação do site.
+                </p>
+              </div>
+
+              <!-- FORMULÁRIO -->
+              <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4 text-left">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Nome Completo -->
+                  <div class="space-y-1.5">
+                    <label for="input-nome" class="block text-xs font-mono text-slate-300 font-semibold">Nome Completo <span class="text-nexxus-blue-400">*</span></label>
+                    <input type="text" id="input-nome" placeholder="Ex: Roberto Silva" class="form-input" required>
+                  </div>
+
+                  <!-- Empresa -->
+                  <div class="space-y-1.5">
+                    <label for="input-empresa" class="block text-xs font-mono text-slate-300 font-semibold">Empresa <span class="text-nexxus-blue-400">*</span></label>
+                    <input type="text" id="input-empresa" placeholder="Ex: Tech Solutions B2B" class="form-input" required>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- E-mail -->
+                  <div class="space-y-1.5">
+                    <label for="input-email" class="block text-xs font-mono text-slate-300 font-semibold">E-mail Profissional <span class="text-nexxus-blue-400">*</span></label>
+                    <input type="email" id="input-email" placeholder="nome@empresa.com.br" class="form-input" required>
+                  </div>
+
+                  <!-- Telefone ou WhatsApp -->
+                  <div class="space-y-1.5">
+                    <label for="input-telefone" class="block text-xs font-mono text-slate-300 font-semibold">Telefone / WhatsApp <span class="text-nexxus-blue-400">*</span></label>
+                    <input type="tel" id="input-telefone" placeholder="(11) 99999-9999" class="form-input" required>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Serviço de Interesse -->
+                  <div class="space-y-1.5">
+                    <label for="select-servico" class="block text-xs font-mono text-slate-300 font-semibold">Serviço de Interesse</label>
+                    <select id="select-servico" class="form-input text-slate-200">
+                      <option value="Terceirização Comercial">Terceirização Comercial (BPO)</option>
+                      <option value="Estruturação Comercial">Estruturação Comercial Interna</option>
+                      <option value="Mentoria Comercial">Mentoria Comercial & Capacitação</option>
+                      <option value="Soluções com IA">Soluções com Inteligência Artificial</option>
+                      <option value="Ainda não sei">Ainda não sei qual preciso</option>
+                    </select>
+                  </div>
+
+                  <!-- Principal Desafio -->
+                  <div class="space-y-1.5">
+                    <label for="select-desafio" class="block text-xs font-mono text-slate-300 font-semibold">Principal Desafio Comercial <span class="text-nexxus-blue-400">*</span></label>
+                    <select id="select-desafio" class="form-input text-slate-200" required>
+                      <option value="">Selecione o seu desafio...</option>
+                      <option value="Gerar mais oportunidades B2B">Gerar mais oportunidades B2B</option>
+                      <option value="Estruturar processo de vendas">Estruturar processo e playbook</option>
+                      <option value="Contratar e gerenciar vendedores">Contratar e gerenciar equipe comercial</option>
+                      <option value="Organizar CRM e indicadores">Organizar CRM Kommo e métricas</option>
+                      <option value="Melhorar taxa de conversão">Melhorar taxa de conversão e fechamento</option>
+                      <option value="Outro">Outro desafio</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Mensagem / Contexto -->
+                <div class="space-y-1.5">
+                  <label for="input-mensagem" class="block text-xs font-mono text-slate-300 font-semibold">Mensagem ou Contexto Adicional</label>
+                  <textarea id="input-mensagem" rows="4" placeholder="Conte brevemente sobre o momento atual das suas vendas ou dúvidas..." class="form-input resize-none"></textarea>
+                </div>
+
+                <!-- Botão Enviar -->
+                <div class="pt-2">
+                  <button type="submit" id="btn-submit-form" class="w-full py-4 rounded-full bg-nexxus-blue-500 hover:bg-nexxus-blue-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider shadow-btn-blue hover:shadow-glow-blue active:scale-95 transition-all flex items-center justify-center gap-2">
+                    <span id="btn-submit-text">SOLICITAR DIAGNÓSTICO GRÁTIS</span>
+                    <iconify-icon id="btn-submit-icon" icon="solar:arrow-right-linear" class="text-lg"></iconify-icon>
+                  </button>
+                </div>
+
+                <div class="text-[11px] text-slate-400 font-mono text-center pt-1">
+                  🔒 Dados protegidos. Resposta garantida em até 12 horas úteis.
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- COLUNA DIREITA: INFORMAÇÕES DE CONTATO & CANAIS -->
+          <div class="lg:col-span-5 space-y-6">
+
+            <!-- Card Resposta Rápida -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-nexxus-blue-500/30 text-left space-y-4">
+              <div class="w-12 h-12 rounded-2xl bg-nexxus-blue-500/20 border border-nexxus-blue-500/40 flex items-center justify-center text-nexxus-blue-400 text-2xl">
+                <iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+              </div>
+              <h3 class="text-xl font-bold text-white uppercase font-heading">Atendimento Consultivo B2B</h3>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                Nossos consultores sêniores analisam a maturidade da sua empresa antes de sugerir qualquer modelo. Não empurramos serviços genéricos.
+              </p>
+              <div class="pt-2 flex items-center gap-2 text-xs font-mono text-nexxus-mint-400 font-bold">
+                <span class="w-2.5 h-2.5 rounded-full bg-nexxus-mint-400 animate-pulse"></span>
+                <span>Tempo Médio de Resposta: até 12 horas</span>
+              </div>
+            </div>
+
+            <!-- Card Canais Diretos -->
+            <div id="canais" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-5">
+              <h3 class="text-lg font-bold text-white uppercase font-heading">Canais de Contato Direto</h3>
+
+              <div class="space-y-4 text-xs sm:text-sm">
+                <!-- E-mail -->
+                <a href="mailto:admin@nexxusagencia.com.br" class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800 hover:border-nexxus-blue-500 transition-colors group">
+                  <div class="w-10 h-10 rounded-xl bg-nexxus-blue-500/20 flex items-center justify-center text-nexxus-blue-400 text-xl shrink-0 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-slate-400 uppercase">E-mail Institucional</div>
+                    <div class="text-white font-semibold group-hover:text-nexxus-blue-400 transition-colors">admin@nexxusagencia.com.br</div>
+                  </div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+estrutura+comercial+da+minha+empresa" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800 hover:border-nexxus-mint-500 transition-colors group">
+                  <div class="w-10 h-10 rounded-xl bg-nexxus-mint-500/20 flex items-center justify-center text-nexxus-mint-400 text-xl shrink-0 group-hover:scale-110 transition-transform">
+                    <iconify-icon icon="line-md:whatsapp"></iconify-icon>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-slate-400 uppercase">WhatsApp Oficial</div>
+                    <div class="text-white font-semibold group-hover:text-nexxus-mint-400 transition-colors">Falar com Consultor B2B</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Localização -->
+            <div id="localizacao" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-nexxus-blue-500/20 flex items-center justify-center text-nexxus-blue-400 text-xl shrink-0">
+                  <iconify-icon icon="solar:map-point-bold-duotone"></iconify-icon>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-white uppercase font-heading">Localização Corporativa</h3>
+                  <p class="text-xs text-slate-400 font-mono">São Paulo / SP</p>
+                </div>
+              </div>
+
+              <div class="text-xs text-slate-300 font-light space-y-1 pl-1">
+                <div class="font-semibold text-white">Edifício Capital Corporate Office</div>
+                <div>Ao lado do Shopping Morumbi</div>
+                <div>São Paulo / SP</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3: O QUE ACONTECE DEPOIS DO ENVIO -->
+      <section id="pos-envio" class="scroll-mt-28 px-4 md:px-8 max-w-6xl mx-auto w-full reveal">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-nexxus-blue-400 text-xs font-bold font-mono uppercase tracking-wider">
+            <iconify-icon icon="solar:sort-by-time-bold" class="text-sm"></iconify-icon>
+            Etapas do Atendimento
+          </div>
+          <h2 class="text-3xl md:text-5xl font-bold text-white uppercase leading-[1.25]">
+            O que Acontece <span class="highlight-blue">Após o Envio</span>?
+          </h2>
+          <p class="text-slate-300 font-light text-base">
+            Conheça o fluxo transparente da Nexxus para atender sua empresa com agilidade.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+            <div class="text-xs font-mono text-nexxus-blue-400 font-bold uppercase">Passo 01</div>
+            <h3 class="text-lg font-normal text-white uppercase font-heading">Análise das Informações</h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">Nosso time analisa seu segmento e desafio antes de ligar.</p>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+            <div class="text-xs font-mono text-nexxus-blue-400 font-bold uppercase">Passo 02</div>
+            <h3 class="text-lg font-normal text-white uppercase font-heading">Contato em 12 Horas</h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">Entramos em contato para agendar uma conversa rápida de alinhamento.</p>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+            <div class="text-xs font-mono text-nexxus-mint-400 font-bold uppercase">Passo 03</div>
+            <h3 class="text-lg font-normal text-white uppercase font-heading">Diagnóstico Comercial</h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">Reunião presencial ou online para mapear gargalos e metas.</p>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+            <div class="text-xs font-mono text-nexxus-mint-400 font-bold uppercase">Passo 04</div>
+            <h3 class="text-lg font-normal text-white uppercase font-heading">Plano de Ação</h3>
+            <p class="text-xs text-slate-300 font-light leading-relaxed">Apresentação da proposta com squad, processo e prazos em 20 dias.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4: PERGUNTAS FREQUENTES (FAQ CONTATO) -->
+      <section id="faq-contato" class="scroll-mt-28 px-4 md:px-8 max-w-5xl mx-auto w-full reveal">
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-nexxus-blue-400 text-xs font-bold font-mono uppercase tracking-wider">
+            <iconify-icon icon="solar:question-square-bold-duotone" class="text-sm"></iconify-icon>
+            Dúvidas sobre o Contato
+          </div>
+          <h2 class="text-3xl md:text-5xl font-bold text-white uppercase leading-[1.25]">
+            Perguntas Frequentes sobre o <span class="highlight-blue">Atendimento</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4 text-left">
+          
+          <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+            <button onclick="toggleFaq('faq-ct-1')" class="w-full p-5 text-left font-semibold text-white text-sm md:text-base flex items-center justify-between gap-4 hover:text-nexxus-blue-400 transition-colors">
+              <span>1. O Diagnóstico Comercial Inicial tem algum custo?</span>
+              <span id="faq-ct-1-icon" class="text-nexxus-blue-400 text-xl font-bold font-mono shrink-0">+</span>
+            </button>
+            <div id="faq-ct-1" class="hidden p-5 pt-0 text-xs md:text-sm text-slate-300 font-light leading-relaxed border-t border-slate-800/60">
+              Não. O diagnóstico comercial inicial é 100% gratuito e sem compromisso. Analisamos sua estrutura atual para indicar a melhor solução.
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+            <button onclick="toggleFaq('faq-ct-2')" class="w-full p-5 text-left font-semibold text-white text-sm md:text-base flex items-center justify-between gap-4 hover:text-nexxus-blue-400 transition-colors">
+              <span>2. Em quanto tempo a Nexxus entra em contato após o envio?</span>
+              <span id="faq-ct-2-icon" class="text-nexxus-blue-400 text-xl font-bold font-mono shrink-0">+</span>
+            </button>
+            <div id="faq-ct-2" class="hidden p-5 pt-0 text-xs md:text-sm text-slate-300 font-light leading-relaxed border-t border-slate-800/60">
+              Nossa equipe de atendimento responde em até <strong>12 horas úteis</strong> pelo e-mail ou WhatsApp informado no formulário.
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl border border-white/10 overflow-hidden">
+            <button onclick="toggleFaq('faq-ct-3')" class="w-full p-5 text-left font-semibold text-white text-sm md:text-base flex items-center justify-between gap-4 hover:text-nexxus-blue-400 transition-colors">
+              <span>3. A Nexxus atende empresas fora de São Paulo?</span>
+              <span id="faq-ct-3-icon" class="text-nexxus-blue-400 text-xl font-bold font-mono shrink-0">+</span>
+            </button>
+            <div id="faq-ct-3" class="hidden p-5 pt-0 text-xs md:text-sm text-slate-300 font-light leading-relaxed border-t border-slate-800/60">
+              Sim. Atendemos empresas de todo o Brasil e operações internacionais com squads remotas e governança digital via CRM Kommo.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SEÇÃO 5: CTA ALTERNATIVO FINAL -->
+      <section id="contato-cta" class="scroll-mt-28 px-4 md:px-8 max-w-6xl mx-auto w-full reveal">
+        <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-nexxus-blue-900/90 via-slate-950 to-nexxus-blue-950 border border-nexxus-blue-500/40 relative overflow-hidden text-center shadow-2xl">
+          <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white uppercase leading-[1.25]">
+              Ainda Está Avaliando Qual <span class="text-nexxus-mint-400">Caminho Seguir</span>?
+            </h2>
+
+            <p class="text-slate-300 font-light text-base leading-relaxed">
+              Conheça em detalhes nossos modelos de Terceirização Comercial (BPO), Estruturação Interna e Mentoria ou faça uma simulação no nosso calculador de ROI.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="servicos-nexxus.html" class="px-8 py-4 rounded-full bg-nexxus-blue-500 hover:bg-nexxus-blue-600 text-white font-bold text-xs uppercase tracking-wider shadow-btn-blue transition-all inline-flex items-center gap-2">
+                <span>CONHECER OS SERVIÇOS</span>
+                <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+              </a>
+
+              <button onclick="openRoiModal()" class="btn-conic-spin text-xs uppercase tracking-wider px-8 py-4">
+                <span class="relative z-10 flex items-center gap-2 font-bold text-white">
+                  <iconify-icon icon="solar:calculator-bold-duotone" class="text-base text-nexxus-mint-400"></iconify-icon>
+                  <span>SIMULADOR DE ROI</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER INSTITUCIONAL COMPLETO -->
+    <footer class="mt-16 border-t border-white/10 bg-slate-950 py-16 text-slate-400 text-sm relative z-10">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
+        
+        <!-- Coluna 1: Marca -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 w-auto select-none">
+          </div>
+
+          <p class="text-xs text-slate-400 font-light leading-relaxed max-w-sm">
+            A Nexxus estrutura e opera o comercial da sua empresa com método, dados e um time pronto: terceirização comercial, mentoria e estruturação de vendas.
+          </p>
+
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://www.instagram.com/nexxus.inc/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-mint-500 flex items-center justify-center text-white transition-all group">
+              <svg class="w-5 h-5 text-white group-hover:text-nexxus-mint-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://linkedin.com/company/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-500 flex items-center justify-center text-white transition-all group">
+              <svg class="w-5 h-5 text-white group-hover:text-nexxus-blue-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-white font-normal text-xs uppercase font-mono tracking-wider">Navegação</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Início</a></li>
+            <li><a href="sobre-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre a Nexxus</a></li>
+            <li><a href="servicos-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a></li>
+            <li><a href="contato-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Contato</a></li>
+            <li><a href="#faq-contato" class="hover:text-nexxus-blue-400 transition-colors">FAQ Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Contato -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider">CONTATO</h4>
+          <div class="space-y-4 text-xs">
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="solar:letter-linear" class="text-nexxus-blue-500 text-lg shrink-0"></iconify-icon>
+              <a href="mailto:admin@nexxusagencia.com.br" class="hover:text-white transition-colors text-slate-300">admin@nexxusagencia.com.br</a>
+            </div>
+            <div class="flex items-start gap-3">
+              <iconify-icon icon="solar:map-point-linear" class="text-nexxus-blue-500 text-lg shrink-0 mt-0.5"></iconify-icon>
+              <div class="text-slate-300 font-light leading-relaxed">
+                <div>Edifício Capital Corporate Office</div>
+                <div>Ao lado do Shopping Morumbi</div>
+                <div>São Paulo/SP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-slate-900 text-center md:flex md:justify-between md:text-left text-xs text-slate-500">
+        <div>© 2026 Nexxus. Todos os direitos reservados.</div>
+        <div class="mt-2 md:mt-0 font-mono">Soluções Comerciais B2B · São Paulo / SP</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- POPUP MODAL: SIMULADOR DE ROI INTERATIVO B2B -->
+  <div id="roi-modal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-xl z-50 hidden items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="glass-card rounded-[32px] max-w-2xl w-full p-6 sm:p-8 border border-nexxus-blue-500/30 shadow-[0_25px_60px_rgba(0,0,0,0.9),_inset_0_1px_1px_rgba(255,255,255,0.1)] relative overflow-hidden text-white transform scale-95 transition-transform duration-300" id="roi-modal-content">
+      <div class="bc-corner bc-corner-tl"></div><div class="bc-corner bc-corner-br"></div>
+
+      <!-- Header do Modal -->
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-nexxus-blue-500/20 border border-nexxus-blue-500/40 flex items-center justify-center text-nexxus-mint-400 text-xl shadow-glow-blue">
+            <iconify-icon icon="solar:calculator-bold-duotone"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white uppercase font-heading tracking-wide">Simulador de ROI Comercial B2B</h3>
+            <p class="text-xs text-slate-300 font-light">Calcule instantaneamente o potencial de receita do seu comercial</p>
+          </div>
+        </div>
+
+        <button onclick="closeRoiModal()" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 hover:border-nexxus-blue-400 text-slate-300 hover:text-white flex items-center justify-center text-lg transition-colors">
+          <iconify-icon icon="solar:close-circle-bold"></iconify-icon>
+        </button>
+      </div>
+
+      <!-- Form Inputs -->
+      <div class="space-y-6 text-left">
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs font-mono">
+            <label for="roi-spend" class="text-slate-300 font-semibold uppercase">Investimento Comercial Mensal</label>
+            <div class="flex items-center gap-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1">
+              <span class="text-nexxus-mint-400 font-bold text-xs">R$</span>
+              <input type="number" id="roi-spend-num" value="5000" min="1000" max="200000" step="500" class="w-24 bg-transparent text-nexxus-mint-400 font-bold text-sm font-mono focus:outline-none text-right">
+            </div>
+          </div>
+          <input type="range" id="roi-spend" min="3000" max="100000" step="1000" value="5000" class="w-full h-2 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-[#25c9b5]">
+          <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+            <span>R$ 3.000</span>
+            <span>R$ 50.000</span>
+            <span>R$ 100.000+</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs font-mono">
+            <label for="roi-ticket" class="text-slate-300 font-semibold uppercase">Ticket Médio por Cliente / Venda</label>
+            <div class="flex items-center gap-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1">
+              <span class="text-nexxus-blue-400 font-bold text-xs">R$</span>
+              <input type="number" id="roi-ticket-num" value="3000" min="500" max="200000" step="500" class="w-24 bg-transparent text-nexxus-blue-400 font-bold text-sm font-mono focus:outline-none text-right">
+            </div>
+          </div>
+          <input type="range" id="roi-ticket" min="1000" max="100000" step="500" value="3000" class="w-full h-2 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-[#0175ef]">
+          <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+            <span>R$ 1.000</span>
+            <span>R$ 50.000</span>
+            <span>R$ 100.000+</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">Leads Qualificados</div>
+            <div class="text-2xl font-bold text-white font-heading mt-1" id="roi-res-leads">62</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Média CPL ~R$ 80</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">Vendas Estimadas</div>
+            <div class="text-2xl font-bold text-nexxus-mint-400 font-heading mt-1" id="roi-res-sales">5</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Taxa Conv. 7.5%</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 col-span-2 sm:col-span-1">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">ROAS / Retorno</div>
+            <div class="text-2xl font-bold text-nexxus-blue-400 font-heading mt-1" id="roi-res-roas">3.0x</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Multiplier ROI</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-nexxus-blue-600/20 to-nexxus-mint-500/20 border border-nexxus-blue-500/40 flex items-center justify-between">
+          <div>
+            <div class="text-xs font-mono text-slate-300 uppercase">Receita Bruta Estimada / Mês</div>
+            <div class="text-2xl sm:text-3xl font-bold text-white font-heading mt-0.5" id="roi-res-revenue">R$ 15.000,00</div>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-nexxus-mint-500 text-slate-950 flex items-center justify-center text-xl shadow-glow-mint font-bold shrink-0">
+            <iconify-icon icon="solar:graph-up-bold"></iconify-icon>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a id="roi-whatsapp-btn" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+fiz+uma+simula%C3%A7%C3%A3o+de+ROI+no+site+com+investimento+de+R%24+5000+e+gostaria+de+um+diagn%C3%B3stico" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-full bg-nexxus-mint-500 hover:bg-nexxus-mint-400 text-slate-950 font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-btn-mint">
+            <iconify-icon icon="line-md:whatsapp" class="text-lg"></iconify-icon>
+            <span>QUERO ESSES RESULTADOS NA MINHA EMPRESA</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN JAVASCRIPT ENGINES -->
+  <script>
+    // Configuração do Modo de Envio do Formulário de Contato
+    // 'demo': Modo apresentação (valida campos, exibe mensagem demo, mantém campos preenchidos)
+    // 'production': Modo produção real (envia dados via API /api/contact)
+    window.FORM_CONTACT_MODE = 'demo';
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      
+      const nome = document.getElementById('input-nome');
+      const empresa = document.getElementById('input-empresa');
+      const email = document.getElementById('input-email');
+      const telefone = document.getElementById('input-telefone');
+      const desafio = document.getElementById('select-desafio');
+      const alertBox = document.getElementById('form-success-alert');
+      const alertText = document.getElementById('form-success-text');
+      const btnSubmit = document.getElementById('btn-submit-form');
+      const btnText = document.getElementById('btn-submit-text');
+
+      let isValid = true;
+      
+      // 1. Validar campos obrigatórios
+      [nome, empresa, email, telefone, desafio].forEach(input => {
+        if (!input.value.trim()) {
+          input.classList.add('input-error');
+          isValid = false;
+        } else {
+          input.classList.remove('input-error');
+        }
+      });
+
+      // 2. Validar formato de e-mail
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email.value.trim() && !emailRegex.test(email.value.trim())) {
+        email.classList.add('input-error');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        const firstError = document.querySelector('.input-error');
+        if (firstError) firstError.focus();
+        return;
+      }
+
+      // 3. Estado visual de carregamento
+      btnSubmit.disabled = true;
+      btnText.innerText = "PROCESSANDO SOLICITAÇÃO...";
+
+      setTimeout(() => {
+        btnSubmit.disabled = false;
+        btnText.innerText = "SOLICITAR DIAGNÓSTICO GRÁTIS";
+
+        if (window.FORM_CONTACT_MODE === 'demo') {
+          // Modo Demonstração: Não envia dados, não abre WhatsApp, exibe mensagem e preserva campos preenchidos
+          if (alertText) {
+            alertText.innerText = "Formulário preenchido com sucesso. O envio real será ativado após a publicação do site.";
+          }
+          alertBox.classList.remove('hidden');
+          alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          // Modo Produção Futuro: Chamada de API real
+          alertBox.classList.remove('hidden');
+        }
+      }, 600);
+    }
+
+    // Clear error on input typing
+    document.addEventListener('DOMContentLoaded', () => {
+      const inputs = document.querySelectorAll('.form-input');
+      inputs.forEach(input => {
+        input.addEventListener('input', () => {
+          input.classList.remove('input-error');
+        });
+      });
+    });
+
+    // FAQ Accordion Engine
+    window.toggleFaq = function(id) {
+      const el = document.getElementById(id);
+      const icon = document.getElementById(`${id}-icon`);
+      if (!el) return;
+      if (el.classList.contains('hidden')) {
+        el.classList.remove('hidden');
+        if (icon) icon.innerText = '−';
+      } else {
+        el.classList.add('hidden');
+        if (icon) icon.innerText = '+';
+      }
+    };
+
+    // 1. Scroll Reveal Observer Engine
+    const observerOptions = { threshold: 0.05, rootMargin: '0px 0px -20px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    function initReveals() {
+      document.querySelectorAll('.reveal, .reveal-3d-rotate').forEach(el => revealObserver.observe(el));
+    }
+    document.addEventListener('DOMContentLoaded', initReveals);
+    setTimeout(initReveals, 100);
+
+    setTimeout(() => {
+      document.querySelectorAll('.reveal, .reveal-3d-rotate').forEach(el => el.classList.add('active'));
+    }, 500);
+
+    // 2. Custom Interactive Cursor Engine
+    (function initCustomCursor() {
+      const dot = document.getElementById('cursor-dot');
+      const ring = document.getElementById('cursor-ring');
+      const arrow = document.getElementById('cursor-arrow');
+      if (!dot || !ring) return;
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let ringX = mouseX;
+      let ringY = mouseY;
+
+      window.addEventListener('pointermove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = `${mouseX}px`;
+        dot.style.top = `${mouseY}px`;
+        if (arrow) {
+          arrow.style.left = `${mouseX}px`;
+          arrow.style.top = `${mouseY}px`;
+        }
+      });
+
+      function renderRing() {
+        ringX += (mouseX - ringX) * 0.18;
+        ringY += (mouseY - ringY) * 0.18;
+        ring.style.left = `${ringX}px`;
+        ring.style.top = `${ringY}px`;
+        requestAnimationFrame(renderRing);
+      }
+      renderRing();
+
+      const interactiveElements = document.querySelectorAll('header nav a, header nav button, .btn-conic-spin, a, button, [role="button"]');
+      interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          if (arrow) arrow.classList.add('active');
+          dot.classList.add('menu-hover');
+          ring.classList.add('menu-hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          if (arrow) arrow.classList.remove('active');
+          dot.classList.remove('menu-hover');
+          ring.classList.remove('menu-hover');
+        });
+      });
+    })();
+
+    // 3. High-Resolution WebGL Starfield Shader Engine
+    (function initWebGLStarfield() {
+      const canvas = document.getElementById('webgl-stars');
+      if (!canvas) return;
+      const gl = canvas.getContext('webgl', { alpha: true, antialias: true, preserveDrawingBuffer: false });
+      if (!gl) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      function resize() {
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const vsSource = `
+        attribute vec3 position;
+        attribute float aSize;
+        attribute vec3 aColor;
+        uniform float time;
+        uniform vec2 resolution;
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          float z = mod(position.z - time * 0.05, 1.0);
+          vec2 pos = position.xy / (z * 1.85);
+          gl_Position = vec4(pos, 0.0, 1.0);
+          float depthScale = (1.0 - z);
+          gl_PointSize = aSize * depthScale * (resolution.y / 650.0);
+          vAlpha = smoothstep(0.0, 0.12, z) * smoothstep(1.0, 0.75, z) * depthScale * 0.85;
+          vColor = aColor;
+        }
+      `;
+
+      const fsSource = `
+        precision mediump float;
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          vec2 coord = gl_PointCoord - vec2(0.5);
+          float dist = length(coord);
+          if (dist > 0.5) discard;
+          float intensity = exp(-dist * 5.5) + (0.5 - dist) * 0.9;
+          gl_FragColor = vec4(vColor, intensity * vAlpha);
+        }
+      `;
+
+      function createShader(gl, type, source) {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+        return shader;
+      }
+
+      const vs = createShader(gl, gl.VERTEX_SHADER, vsSource);
+      const fs = createShader(gl, gl.FRAGMENT_SHADER, fsSource);
+      const prog = gl.createProgram();
+      gl.attachShader(prog, vs);
+      gl.attachShader(prog, fs);
+      gl.linkProgram(prog);
+      gl.useProgram(prog);
+
+      const numStars = 3500;
+      const positions = new Float32Array(numStars * 3);
+      const sizes = new Float32Array(numStars);
+      const colors = new Float32Array(numStars * 3);
+
+      const colorPalette = [
+        [0.0039, 0.4588, 0.937], // Nexxus Electric Blue #0175ef
+        [0.145, 0.788, 0.710],   // Nexxus Mint #25c9b5
+        [0.376, 0.647, 0.980],   // Light Blue #60a5fa
+        [1.0, 1.0, 1.0]          // White
+      ];
+
+      for (let i = 0; i < numStars; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 4.2;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 4.2;
+        positions[i * 3 + 2] = Math.random();
+
+        sizes[i] = Math.random() * 3.2 + 1.2;
+
+        const c = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+        colors[i * 3] = c[0];
+        colors[i * 3 + 1] = c[1];
+        colors[i * 3 + 2] = c[2];
+      }
+
+      const posBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, posBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+      const posLoc = gl.getAttribLocation(prog, 'position');
+      gl.enableVertexAttribArray(posLoc);
+      gl.vertexAttribPointer(posLoc, 3, gl.FLOAT, false, 0, 0);
+
+      const sizeBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
+      const sizeLoc = gl.getAttribLocation(prog, 'aSize');
+      gl.enableVertexAttribArray(sizeLoc);
+      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 0, 0);
+
+      const colorBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
+      const colorLoc = gl.getAttribLocation(prog, 'aColor');
+      gl.enableVertexAttribArray(colorLoc);
+      gl.vertexAttribPointer(colorLoc, 3, gl.FLOAT, false, 0, 0);
+
+      const timeLoc = gl.getUniformLocation(prog, 'time');
+      const resLoc = gl.getUniformLocation(prog, 'resolution');
+
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+
+      const startTime = performance.now();
+      function render() {
+        const time = (performance.now() - startTime) * 0.001;
+        gl.clearColor(0.0, 0.0, 0.0, 0.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+
+        gl.uniform1f(timeLoc, time);
+        if (resLoc) gl.uniform2f(resLoc, canvas.width, canvas.height);
+
+        gl.drawArrays(gl.POINTS, 0, numStars);
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+
+    // 4. Interactive ROI Simulator Engine
+    window.openRoiModal = function() {
+      const modal = document.getElementById('roi-modal');
+      const content = document.getElementById('roi-modal-content');
+      if (!modal) return;
+      modal.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+      modal.classList.add('flex', 'opacity-100');
+      if (content) {
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+      }
+      if (window.calculateRoi) window.calculateRoi();
+    };
+
+    window.closeRoiModal = function() {
+      const modal = document.getElementById('roi-modal');
+      const content = document.getElementById('roi-modal-content');
+      if (!modal) return;
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }, 250);
+      if (content) {
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+      }
+    };
+
+    window.calculateRoi = function(source = 'range') {
+      const spendRange = document.getElementById('roi-spend');
+      const spendNum = document.getElementById('roi-spend-num');
+      const ticketRange = document.getElementById('roi-ticket');
+      const ticketNum = document.getElementById('roi-ticket-num');
+
+      if (!spendRange || !ticketRange) return;
+
+      let spend, ticket;
+      if (source === 'num') {
+        spend = parseFloat(spendNum.value || 5000);
+        ticket = parseFloat(ticketNum.value || 3000);
+        spendRange.value = Math.min(spend, 100000);
+        ticketRange.value = Math.min(ticket, 100000);
+      } else {
+        spend = parseFloat(spendRange.value || 5000);
+        ticket = parseFloat(ticketRange.value || 3000);
+        if (spendNum) spendNum.value = spend;
+        if (ticketNum) ticketNum.value = ticket;
+      }
+
+      const avgCpl = 80.0;
+      const conversionRate = 0.075;
+
+      const leads = Math.round(spend / avgCpl);
+      const sales = Math.max(1, Math.round(leads * conversionRate));
+      const revenue = sales * ticket;
+      const roas = (revenue / spend).toFixed(1);
+
+      const leadsEl = document.getElementById('roi-res-leads');
+      const salesEl = document.getElementById('roi-res-sales');
+      const roasEl = document.getElementById('roi-res-roas');
+      const revEl = document.getElementById('roi-res-revenue');
+
+      if (leadsEl) leadsEl.innerText = `${leads}`;
+      if (salesEl) salesEl.innerText = `${sales}`;
+      if (roasEl) roasEl.innerText = `${roas}x`;
+      if (revEl) revEl.innerText = `R$ ${revenue.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+
+      const waBtn = document.getElementById('roi-whatsapp-btn');
+      if (waBtn) {
+        const msg = encodeURIComponent(`Olá! Fiz uma simulação de ROI no site da Nexxus (Investimento: R$ ${spend.toLocaleString('pt-BR')}, Ticket Médio: R$ ${ticket.toLocaleString('pt-BR')}) com previsão de R$ ${revenue.toLocaleString('pt-BR')} em faturamento. Gostaria de um diagnóstico comercial gratuito.`);
+        waBtn.href = `https://wa.me/5511999999999?text=${msg}`;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const spendRange = document.getElementById('roi-spend');
+      const spendNum = document.getElementById('roi-spend-num');
+      const ticketRange = document.getElementById('roi-ticket');
+      const ticketNum = document.getElementById('roi-ticket-num');
+
+      if (spendRange) spendRange.addEventListener('input', () => window.calculateRoi('range'));
+      if (spendNum) spendNum.addEventListener('input', () => window.calculateRoi('num'));
+      if (ticketRange) ticketRange.addEventListener('input', () => window.calculateRoi('range'));
+      if (ticketNum) ticketNum.addEventListener('input', () => window.calculateRoi('num'));
+
+      const modal = document.getElementById('roi-modal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) window.closeRoiModal();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
