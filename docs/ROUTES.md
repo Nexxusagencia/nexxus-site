@@ -19,6 +19,11 @@ Este documento descreve as rotas ativas no backend Flask (`app.py`), seus arquiv
 | `/contato` | `contato-nexxus.html` | Página de Atendimento & Formulário |
 | `/contato.html` | `contato-nexxus.html` | Alias estático da página Contato |
 | `/contato-nexxus.html` | `contato-nexxus.html` | Rota direta da página Contato |
+| `/blog` | `blog-nexxus.html` | Hub Principal do Blog e Artigos |
+| `/blog.html` | `blog-nexxus.html` | Alias estático do Blog |
+| `/blog/<slug>` | `<slug>.html` / `artigo.html` | Rota amigável direta para artigos individuais |
+| `/artigo` | `artigo.html` | Template dinâmico para leitura de artigos |
+| `/links` | `links.html` | Central de Links Institucionais |
 | `/api/calculate-roi` | *Backend Endpoint* | API POST para cálculo do Simulador de ROI |
 
 ---
@@ -28,5 +33,7 @@ Este documento descreve as rotas ativas no backend Flask (`app.py`), seus arquiv
 - **Home**: Aponta para `index-nexxus.html` (`/`).
 - **Sobre**: Aponta para `sobre-nexxus.html` (`/sobre`).
 - **Serviços**: Aponta para `servicos-nexxus.html` (`/servicos`).
+- **Blog**: Aponta para `blog-nexxus.html` (`/blog`).
 - **Contato**: Aponta para `contato-nexxus.html` (`/contato`).
+- **Links**: Aponta para `links.html` (`/links`).
 - **CTAs Comerciais de Diagnóstico**: Apontam para `contato-nexxus.html#formulario` (`/contato#formulario`).

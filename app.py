@@ -32,10 +32,11 @@ DESIGN_TOKENS = {
         }
     },
     "typography": {
-        "fontHeading": "'Oswald', sans-serif",
-        "fontBody": "'Nexa', 'Plus Jakarta Sans', sans-serif",
+        "fontHeading": "'Anton', sans-serif",
+        "fontCardHeading": "'Oswald', sans-serif",
+        "fontBody": "'Plus Jakarta Sans', 'Inter', sans-serif",
         "fontMono": "'JetBrains Mono', monospace",
-        "lineHeightHeading": "1.28"
+        "lineHeightHeading": "1.15"
     },
     "shadows": {
         "glowBlue": "0 0 25px rgba(1, 117, 239, 0.35)",
@@ -70,6 +71,59 @@ def servicos():
 def contato():
     contato_path = os.path.join(os.path.dirname(__file__), "contato-nexxus.html")
     return send_file(contato_path)
+
+@app.route("/blog")
+@app.route("/blog.html")
+@app.route("/blog-nexxus.html")
+def blog():
+    blog_path = os.path.join(os.path.dirname(__file__), "blog-nexxus.html")
+    if not os.path.exists(blog_path):
+        blog_path = os.path.join(os.path.dirname(__file__), "blog.html")
+    return send_file(blog_path)
+
+@app.route("/blog/<path:slug>")
+def blog_article(slug):
+    # 1. Se for um arquivo estático (imagem, assets, css, etc.), serve diretamente do diretório raiz
+    static_candidate = os.path.join(os.path.dirname(__file__), slug)
+    if os.path.isfile(static_candidate):
+        return send_file(static_candidate)
+
+    # 2. Se for link para páginas institucionais requisitadas dentro de /blog/
+    clean_slug = slug.replace(".html", "").strip("/")
+    if clean_slug in ["index", "index-nexxus", ""]:
+        return index()
+    if clean_slug in ["sobre", "sobre-nexxus"]:
+        return sobre()
+    if clean_slug in ["servicos", "servicos-nexxus"]:
+        return servicos()
+    if clean_slug in ["contato", "contato-nexxus"]:
+        return contato()
+    if clean_slug in ["blog", "blog-nexxus"]:
+        return blog()
+
+    # 3. Verifica se existe o arquivo HTML estático com o slug do artigo
+    article_path = os.path.join(os.path.dirname(__file__), f"{clean_slug}.html")
+    if os.path.isfile(article_path):
+        return send_file(article_path)
+
+    # 4. Fallback para o template dinâmico artigo.html
+    dynamic_path = os.path.join(os.path.dirname(__file__), "artigo.html")
+    if os.path.isfile(dynamic_path):
+        return send_file(dynamic_path)
+    return blog()
+
+@app.route("/artigo")
+@app.route("/artigo.html")
+@app.route("/artigo-nexxus.html")
+def artigo():
+    artigo_path = os.path.join(os.path.dirname(__file__), "artigo.html")
+    return send_file(artigo_path)
+
+@app.route("/links")
+@app.route("/links.html")
+def links():
+    links_path = os.path.join(os.path.dirname(__file__), "links.html")
+    return send_file(links_path)
 
 @app.route("/design-system")
 @app.route("/design-system.html")
@@ -144,6 +198,7 @@ def export_css():
   --nexxus-mint: {DESIGN_TOKENS['colors']['mint']['default']};
   --nexxus-mint-glow: {DESIGN_TOKENS['colors']['mint']['glow']};
   --font-heading: {DESIGN_TOKENS['typography']['fontHeading']};
+  --font-card-heading: {DESIGN_TOKENS['typography']['fontCardHeading']};
   --font-body: {DESIGN_TOKENS['typography']['fontBody']};
   --font-mono: {DESIGN_TOKENS['typography']['fontMono']};
 }}

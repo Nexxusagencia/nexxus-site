@@ -10,7 +10,7 @@ Este repositório contém o código-fonte completo do novo site institucional da
 - **Frontend / Styling**: HTML5, Vanilla CSS, Tailwind CSS CDN (com tokens customizados Nexxus Obsidian Glass).
 - **Iconografia**: Iconify Icons (Solar & Line-MD Icons).
 - **Motores Visuais**: WebGL Starfield Shader Canvas (`#webgl-stars`), Cursor Neonisado Interativo, Scroll Reveal Observer, Simulador de ROI B2B em Pop-up Modal e Accordion FAQ.
-- **Tipografia**: Oswald (Bold 700 / Regular 400), Plus Jakarta Sans / Nexa Fallback e JetBrains Mono.
+- **Tipografia**: Plus Jakarta Sans (Headlines 800, Cards/Subtítulos 700, Subheadlines 500, Body) e JetBrains Mono (Métricas e Código).
 
 ---
 
@@ -19,7 +19,9 @@ Este repositório contém o código-fonte completo do novo site institucional da
 1. **Home (`/`)**: Abertura institucional, vídeo de fundo, seções O Problema, Soluções, Diferenciais, Metodologia, Calculadora de ROI e FAQ.
 2. **Sobre a Nexxus (`/sobre`)**: 8 seções institucionais contando a história, o posicionamento B2B, a visão e os valores da agência.
 3. **Serviços (`/servicos`)**: 12 seções detalhando Terceirização Comercial (BPO), Estruturação Interna, Mentoria Comercial e Soluções com Inteligência Artificial.
-4. **Contato (`/contato`)**: Página de atendimento consultivo com formulário completo (`id="formulario"`), localização no Edifício Capital Corporate Office em SP e modo de demonstração ativado (`FORM_CONTACT_MODE = 'demo'`).
+4. **Blog & Artigos (`/blog`, `/blog/<slug>`)**: Hub de conteúdo e inteligência comercial B2B com filtros por categoria, artigos pré-renderizados Jamstack, barra de leitura e artigos relacionados.
+5. **Contato (`/contato`)**: Página de atendimento consultivo com formulário completo (`id="formulario"`), localização no Edifício Capital Corporate Office em SP e modo de demonstração ativado (`FORM_CONTACT_MODE = 'demo'`).
+6. **Central de Links (`/links`)**: Hub com links rápidos para WhatsApp, Instagram, LinkedIn e páginas da agência.
 
 ---
 

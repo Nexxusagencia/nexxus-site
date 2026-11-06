@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Vendas B2B e Estruturação Comercial | Nexxus</title>
+  <meta name="description" content="Artigos práticos sobre terceirização comercial, SDR, Hunter e Closer, prospecção outbound, CRM, playbook e como escalar vendas B2B com método. Conteúdo da equipe Nexxus.">
+  <meta name="keywords" content="terceirização comercial, BPO comercial, outsourcing de vendas, estruturação comercial, SDR hunter closer, prospecção outbound B2B, consultoria comercial São Paulo">
+  <meta name="author" content="Nexxus Agência Comercial">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://nexxusagencia.com.br/blog">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nexxus">
+  <meta property="og:title" content="Blog de Vendas B2B e Estruturação Comercial | Nexxus">
+  <meta property="og:description" content="Artigos práticos sobre terceirização comercial, SDR, Hunter e Closer, prospecção outbound, CRM, playbook e como escalar vendas B2B com método. Conteúdo da equipe Nexxus.">
+  <meta property="og:image" content="https://nexxusagencia.com.br/og-image.jpg">
+
+      <!-- Google Fonts: Anton (Títulos Principais), Oswald (Subtítulos dos Cards), Plus Jakarta Sans (UI, Textos & Métricas) & JetBrains Mono (Code/Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Iconify Icons CDN -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            anton: ['Anton', 'sans-serif'],
+            oswald: ['Oswald', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            nexxus: {
+              bg: '#020611',
+              card: '#080E20',
+              glass: 'rgba(9, 16, 36, 0.75)',
+              border: 'rgba(1, 117, 239, 0.15)',
+              blue: {
+                DEFAULT: '#0175ef',
+                300: '#60a5fa',
+                400: '#3b82f6',
+                500: '#0175ef',
+                600: '#1d4ed8',
+                700: '#1e40af',
+                glow: 'rgba(1, 117, 239, 0.35)'
+              },
+              mint: {
+                DEFAULT: '#25c9b5',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#25c9b5',
+                600: '#0d9488',
+                glow: 'rgba(37, 201, 181, 0.35)'
+              }
+            }
+          },
+          boxShadow: {
+            'glow-blue': '0 0 25px rgba(1, 117, 239, 0.35)',
+            'glow-mint': '0 0 25px rgba(37, 201, 181, 0.35)',
+            'glass-inset': 'inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 20px 40px -10px rgba(0,0,0,0.8)',
+            'btn-blue': '0 10px 25px -5px rgba(1, 117, 239, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 5px rgba(29, 78, 216, 0.8)',
+            'btn-mint': '0 10px 25px -5px rgba(37, 201, 181, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 5px rgba(13, 148, 136, 0.8)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <style>
+
+    body {
+      background-color: #020611;
+      color: #93C5FD;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+        /* Títulos Principais de Alto Impacto (H1, H2, .main-title, .title-bold): Anton */
+    h1, h2, .main-title, .title-bold {
+      font-family: 'Anton', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+      line-height: 1.15 !important;
+    }
+
+    /* Subtítulos dos Cards (H3, H4, H5, H6, .card-title): Oswald Condensed Regular */
+    h3, h4, h5, h6, .card-title {
+      font-family: 'Oswald', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      line-height: 1.25 !important;
+    }
+
+    /* Métricas numéricas em Plus Jakarta Sans para máxima legibilidade */
+    .counter-val {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+    }
+
+    .subtitle, .section-subtitle, .subheadline {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.01em;
+      line-height: 1.5 !important;
+      color: #FFFFFF;
+    }
+
+    .highlight-blue {
+      color: #0175ef !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #020611; }
+    ::-webkit-scrollbar-thumb { background: #1E3A8A; border-radius: 4px; border: 2px solid #020611; }
+    ::-webkit-scrollbar-thumb:hover { background: #0175ef; }
+
+    /* Grain Overlay Texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* Glass Effect Utilities */
+    .glass-card {
+      background: rgba(8, 14, 32, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(1, 117, 239, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+
+    /* Bento Corner Bracket Accents */
+    .bc-corner {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      z-index: 4;
+      pointer-events: none;
+    }
+    .bc-corner::before, .bc-corner::after {
+      content: '';
+      position: absolute;
+      background: rgba(1, 117, 239, 0.4);
+    }
+    .bc-corner::before { width: 12px; height: 1px; }
+    .bc-corner::after { width: 1px; height: 12px; }
+    .bc-corner-tl { top: 8px; left: 8px; }
+    .bc-corner-tl::before { top: 0; left: 0; }
+    .bc-corner-tl::after { top: 0; left: 0; }
+    .bc-corner-br { bottom: 8px; right: 8px; }
+    .bc-corner-br::before { bottom: 0; right: 0; }
+    .bc-corner-br::after { bottom: 0; right: 0; }
+
+    /* Conic Spin Button */
+    .btn-conic-spin {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 9999px;
+      background: #050b1e;
+      color: #FFFFFF;
+      font-weight: 600;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 0;
+      isolation: isolate;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-conic-spin::before {
+      content: '';
+      position: absolute;
+      top: -250%;
+      left: -250%;
+      width: 600%;
+      height: 600%;
+      background: conic-gradient(
+        from 0deg,
+        rgba(1, 117, 239, 0.05) 0deg,
+        rgba(1, 117, 239, 0.05) 180deg,
+        #0175ef 250deg,
+        #25c9b5 320deg,
+        rgba(1, 117, 239, 0.05) 360deg
+      );
+      z-index: -2;
+      animation: spin-conic-universal 4s linear infinite;
+      transform-origin: center center;
+    }
+
+    .btn-conic-spin::after {
+      content: '';
+      position: absolute;
+      inset: 1.5px;
+      border-radius: 9999px;
+      background: #050b1e;
+      z-index: -1;
+      transition: background 0.3s ease;
+    }
+
+    .btn-conic-spin:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(1, 117, 239, 0.4), 0 0 12px rgba(37, 201, 181, 0.3);
+    }
+
+    .btn-conic-spin:hover::after {
+      background: #08112d;
+    }
+
+    @keyframes spin-conic-universal {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Keyframe Animations & Staggered Reveal Effects */
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    .hero-anim-1 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+    .hero-anim-2 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; opacity: 0; }
+    .hero-anim-3 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+    .hero-anim-4 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards; opacity: 0; }
+    .hero-anim-5 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; opacity: 0; }
+
+    /* Scroll Reveal Modes */
+    .reveal {
+      opacity: 0;
+      filter: blur(10px);
+      transform: translateY(25px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      filter: blur(10px);
+      transform: scale(0.94) translateY(25px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
+    }
+    .reveal-scale.active {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1) translateY(0);
+    }
+
+    /* Stagger Delays */
+    .delay-1 { transition-delay: 0.08s !important; }
+    .delay-2 { transition-delay: 0.16s !important; }
+    .delay-3 { transition-delay: 0.24s !important; }
+    .delay-4 { transition-delay: 0.32s !important; }
+    .delay-5 { transition-delay: 0.40s !important; }
+    .delay-6 { transition-delay: 0.48s !important; }
+  </style>
+</head>
+<body class="relative min-h-screen antialiased selection:bg-nexxus-blue-500/30 selection:text-white">
+
+  <!-- Interactive WebGL Canvas Shader Background -->
+  <canvas id="webgl-stars" class="fixed inset-0 z-0 pointer-events-none opacity-60"></canvas>
+  <div class="fixed inset-0 opacity-[0.04] pointer-events-none z-50 mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E');"></div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="fixed top-[-15%] left-[20%] -translate-x-1/2 w-[600px] h-[350px] bg-nexxus-blue-500/10 blur-[160px] rounded-full pointer-events-none z-0"></div>
+  <div class="fixed top-[50%] right-[-10%] w-[500px] h-[300px] bg-nexxus-blue-600/08 blur-[160px] rounded-full pointer-events-none z-0"></div>
+
+  <!-- MAIN WRAPPER -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- HEADER STICKY NAV -->
+    <header class="sticky top-4 z-50 px-3 md:px-8 max-w-7xl mx-auto w-full">
+      <nav class="glass-card rounded-full px-4 md:px-6 py-3.5 flex items-center justify-between shadow-2xl relative whitespace-nowrap">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3 shrink-0 mr-4 xl:mr-8">
+          <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap">
+            <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 sm:h-8 w-auto select-none">
+          </a>
+          <span class="hidden md:inline-block text-slate-600">|</span>
+          <span class="hidden md:inline-block text-xs font-mono text-slate-400 font-medium">Blog</span>
+        </div>
+
+        <!-- Links Internos -->
+        <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-gray-300 whitespace-nowrap shrink-0 mr-2 xl:mr-4">
+          <a href="index.html" class="hover:text-nexxus-blue-400 transition-colors flex items-center gap-1.5">
+            <iconify-icon icon="solar:home-2-bold" class="text-sm text-nexxus-blue-400"></iconify-icon>
+            Início
+          </a>
+          <a href="sobre.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre</a>
+          <a href="servicos.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a>
+          <a href="blog.html" class="hover:text-nexxus-blue-400 transition-colors font-bold text-white">Blog</a>
+          <a href="links.html" class="hover:text-nexxus-blue-400 transition-colors">Links</a>
+          <a href="contato.html" class="hover:text-nexxus-blue-400 transition-colors">Contato</a>
+        </div>
+
+        <!-- Botões CTA -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button onclick="openRoiModal()" class="btn-conic-spin text-xs uppercase tracking-wider px-5 py-2.5">
+            <span class="relative z-10 flex items-center gap-2 font-bold text-white">
+              <iconify-icon icon="solar:calculator-bold-duotone" class="text-nexxus-mint-400 text-sm"></iconify-icon>
+              <span>Simulador ROI</span>
+            </span>
+          </button>
+        </div>
+
+      </nav>
+    </header>
+
+    <main class="flex-1 space-y-12 md:space-y-16 py-8">
+
+      <!-- SEÇÃO HERO DO BLOG -->
+      <section id="hero" class="relative px-4 md:px-8 max-w-7xl mx-auto w-full pt-8 md:pt-12">
+        <div class="text-center max-w-4xl mx-auto space-y-6">
+          
+          <!-- Breadcrumb Navigation -->
+          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 hero-anim-1">
+            <a href="index.html" class="hover:text-nexxus-blue-400 transition-colors">Início</a>
+            <span class="text-slate-600">/</span>
+            <span class="text-nexxus-blue-400 font-semibold">Blog</span>
+          </nav>
+
+          <div class="block hero-anim-2">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-xs font-mono text-nexxus-blue-400 font-bold uppercase tracking-wider">
+              Conteúdo Prático & Estratégia de Vendas B2B
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white uppercase leading-tight max-w-4xl mx-auto hero-anim-3">
+            Inteligência Comercial, <span class="highlight-blue">Processos e Terceirização</span>
+          </h1>
+
+          <p class="text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto leading-relaxed hero-anim-4">
+            Artigos práticos da equipe Nexxus sobre terceirização comercial, SDR, Hunter e Closer, cadências multicanais e gestão de vendas por dados.
+          </p>
+
+          <!-- Filtros de Categorias -->
+          <div class="pt-4 flex flex-wrap items-center justify-center gap-2.5 hero-anim-5">
+            <button onclick="filterArticles('todos', event)" class="filter-btn px-4 py-2 rounded-full bg-nexxus-blue-500 text-white font-bold text-xs font-mono uppercase tracking-wider shadow-sm transition-all active-filter">
+              Todos
+            </button>
+            <button onclick="filterArticles('terceirizacao', event)" class="filter-btn px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs font-mono uppercase tracking-wider transition-all">
+              Terceirização Comercial
+            </button>
+            <button onclick="filterArticles('vendas-b2b', event)" class="filter-btn px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs font-mono uppercase tracking-wider transition-all">
+              Vendas B2B
+            </button>
+            <button onclick="filterArticles('estrategia', event)" class="filter-btn px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs font-mono uppercase tracking-wider transition-all">
+              Estratégia
+            </button>
+            <button onclick="filterArticles('metricas', event)" class="filter-btn px-4 py-2 rounded-full bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs font-mono uppercase tracking-wider transition-all">
+              Métricas & SDR
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LISTAGEM DOS ARTIGOS (FUNDO BRANCO FULL BLEED) -->
+      <section id="artigos-grid" class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white border-y border-slate-200/80 py-16 sm:py-24 text-slate-900 overflow-hidden scroll-mt-28 reveal z-10">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Artigo 1 -->
+            <article data-category="terceirizacao" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-1 group">
+              <div class="space-y-4">
+                <a href="quanto-custa-terceirizar-time-de-vendas.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-quanto-custa-terceirizar-squad.jpg" alt="Quanto custa terceirizar o time de vendas em 2026" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Terceirização Comercial
+                  </div>
+                </a>
+                
+                <div class="text-xs font-mono text-slate-500">26 de Julho de 2026 • 5 min de leitura</div>
+                
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="quanto-custa-terceirizar-time-de-vendas.html">Quanto Custa Terceirizar o Time de Vendas em 2026</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Conta aberta dos dois lados: o custo real de um time comercial CLT em 2026, impostos, os três modelos de cobrança e os cenários em que terceirizar não compensa.
+                </p>
+              </div>
+
+              <a href="quanto-custa-terceirizar-time-de-vendas.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+            <!-- Artigo 2 -->
+            <article data-category="vendas-b2b" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-2 group">
+              <div class="space-y-4">
+                <a href="tendencias-mercado-comercial-b2b.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-tendencias-b2b-laptop.png" alt="Tendências do mercado comercial B2B" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Vendas B2B
+                  </div>
+                </a>
+
+                <div class="text-xs font-mono text-slate-500">02 de Junho de 2026 • 7 min de leitura</div>
+
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="tendencias-mercado-comercial-b2b.html">Tendências do Mercado Comercial B2B: O que Muda</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Vendas consultivas, dados no centro da decisão e processos bem definidos. O improviso está perdendo espaço e quem estrutura a operação sai na frente.
+                </p>
+              </div>
+
+              <a href="tendencias-mercado-comercial-b2b.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+            <!-- Artigo 3 -->
+            <article data-category="estrategia" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-3 group">
+              <div class="space-y-4">
+                <a href="terceirizar-ou-estruturar-comercial-interno.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-terceirizar-ou-estrutura.png" alt="Terceirizar ou estruturar o comercial interno" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Estratégia
+                  </div>
+                </a>
+
+                <div class="text-xs font-mono text-slate-500">26 de Maio de 2026 • 6 min de leitura</div>
+
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="terceirizar-ou-estruturar-comercial-interno.html">Terceirizar ou Montar Time de Vendas Interno</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Um diagnóstico completo com nota de corte, o custo real da janela de rampa de novos contratados e a cláusula de saída que quase ninguém exige.
+                </p>
+              </div>
+
+              <a href="terceirizar-ou-estruturar-comercial-interno.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+            <!-- Artigo 4 -->
+            <article data-category="terceirizacao" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-4 group">
+              <div class="space-y-4">
+                <a href="quem-fecha-a-venda-prospeccao-terceirizada.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-quem-fecha-venda.jpg" alt="Quem fecha a venda quando a prospecção é terceirizada" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Terceirização Comercial
+                  </div>
+                </a>
+
+                <div class="text-xs font-mono text-slate-500">10 de Setembro de 2026 • 4 min de leitura</div>
+
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="quem-fecha-a-venda-prospeccao-terceirizada.html">Quem Fecha a Venda Quando a Prospecção é Terceirizada</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Estrutura de papéis entre a squad externa e o seu time interno. Veja como calcular a demanda de reuniões qualificadas por mês.
+                </p>
+              </div>
+
+              <a href="quem-fecha-a-venda-prospeccao-terceirizada.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+            <!-- Artigo 5 -->
+            <article data-category="metricas" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-5 group">
+              <div class="space-y-4">
+                <a href="quantas-reunioes-sdr-por-mes.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-reunioes-sdr.jpg" alt="Quantas reuniões um SDR deve agendar por mês" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Métricas & SDR
+                  </div>
+                </a>
+
+                <div class="text-xs font-mono text-slate-500">25 de Agosto de 2026 • 5 min de leitura</div>
+
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="quantas-reunioes-sdr-por-mes.html">Quantas Reuniões um SDR Deve Agendar por Mês</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  O benchmark real do mercado fica entre 12 e 20 agendamentos. Veja como calcular sua meta pela margem de no-show e teto do closer.
+                </p>
+              </div>
+
+              <a href="quantas-reunioes-sdr-por-mes.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+            <!-- Artigo 6 -->
+            <article data-category="estrategia" class="article-card spotlight-card bg-slate-50/90 border border-slate-200/90 p-5 rounded-3xl relative shadow-sm hover:shadow-xl transition-all flex flex-col justify-between reveal-scale delay-6 group">
+              <div class="space-y-4">
+                <a href="por-que-terceirizar-operacao-comercial.html" class="block relative rounded-2xl overflow-hidden h-[210px] border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-terceirizar-operacao.jpg" alt="Por que terceirizar a operação comercial" loading="lazy" width="400" height="210" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                  <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-white/10 text-white text-[11px] font-mono font-bold uppercase">
+                    Estratégia
+                  </div>
+                </a>
+
+                <div class="text-xs font-mono text-slate-500">12 de Maio de 2026 • 6 min de leitura</div>
+
+                <h2 class="text-lg font-bold text-slate-950 uppercase font-heading leading-tight group-hover:text-nexxus-blue-600 transition-colors">
+                  <a href="por-que-terceirizar-operacao-comercial.html">Por que Terceirizar a Operação Comercial (e Quando Não)</a>
+                </h2>
+
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Terceirizar a operação comercial resolve custos trabalhistas e tempo de rampa, mas não resolve ticket baixo nem mercado restrito.
+                </p>
+              </div>
+
+              <a href="por-que-terceirizar-operacao-comercial.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors pt-4 mt-4 border-t border-slate-200/80">
+                <span>LER ARTIGO COMPLETO</span>
+                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </a>
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SEÇÃO CTA DE DIAGNÓSTICO -->
+      <section id="contato-cta" class="scroll-mt-28 px-4 md:px-8 max-w-6xl mx-auto w-full reveal">
+        <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-r from-nexxus-blue-900/90 via-slate-950 to-nexxus-blue-950 border border-nexxus-blue-500/40 relative overflow-hidden text-center shadow-2xl">
+          <div class="max-w-3xl mx-auto space-y-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white uppercase leading-[1.25]">
+              Quer Aplicar Essas Estratégias na <span class="text-nexxus-mint-400">Sua Empresa</span>?
+            </h2>
+
+            <p class="text-slate-300 font-light text-base leading-relaxed">
+              Solicite um diagnóstico gratuito com nossos consultores sêniores e saiba como colocar uma squad comercial completa operando em 20 dias.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="contato.html" class="px-8 py-4 rounded-full bg-nexxus-blue-500 hover:bg-nexxus-blue-600 text-white font-bold text-xs uppercase tracking-wider shadow-btn-blue transition-all inline-flex items-center gap-2">
+                <span>SOLICITAR DIAGNÓSTICO GRÁTIS</span>
+                <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+              </a>
+
+              <button onclick="openRoiModal()" class="btn-conic-spin text-xs uppercase tracking-wider px-8 py-4">
+                <span class="relative z-10 flex items-center gap-2 font-bold text-white">
+                  <iconify-icon icon="solar:calculator-bold-duotone" class="text-base text-nexxus-mint-400"></iconify-icon>
+                  <span>SIMULADOR DE ROI</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+    <footer class="mt-20 border-t border-white/10 bg-slate-950 py-16 text-slate-400 text-sm relative z-10 selection:bg-nexxus-blue-500/30 selection:text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Grid Superior: 4 Colunas Estruturadas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+          
+          <!-- Coluna 1: Marca, Missão & Redes Sociais (lg:col-span-4) -->
+          <div class="lg:col-span-4 space-y-4 text-left">
+            <a href="index.html" class="inline-flex items-center gap-2.5 group">
+              <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus Agência Comercial" class="h-8 w-auto select-none transition-transform group-hover:scale-105">
+            </a>
+
+            <p class="text-xs text-slate-400 font-light leading-relaxed max-w-sm">
+              A Nexxus estrutura e opera o setor comercial da sua empresa com método proprietário, inteligência de dados e equipe dedicada (SDR, Hunter e Closer). Operação no ar em 20 dias.
+            </p>
+
+            <!-- Status Operacional -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Operação Comercial B2B Ativa</span>
+            </div>
+
+            <!-- Canais Sociais -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="https://www.instagram.com/nexxus.inc/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-mint-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Instagram @nexxus.inc" aria-label="Instagram">
+                <iconify-icon icon="line-md:instagram" class="group-hover:text-nexxus-mint-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://linkedin.com/company/nexxus-ag%C3%AAncia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="LinkedIn Nexxus" aria-label="LinkedIn">
+                <iconify-icon icon="line-md:linkedin" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+um+diagn%C3%B3stico+comercial+com+a+Nexxus" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="WhatsApp Comercial" aria-label="WhatsApp">
+                <svg class="w-5 h-5 text-white group-hover:text-emerald-400 transition-colors fill-current" viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/>
+                </svg>
+              </a>
+              <a href="links.html" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Central de Links" aria-label="Central de Links">
+                <iconify-icon icon="solar:link-circle-bold" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Soluções Comerciais (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-500"></span>
+              <span>Soluções</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="servicos.html#terceirizacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Terceirização Comercial (BPO)</span></a></li>
+              <li><a href="servicos.html#estruturacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Estruturação de Vendas B2B</span></a></li>
+              <li><a href="servicos.html#mentoria" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Mentoria & Treinamento SDR/Closer</span></a></li>
+              <li><a href="servicos.html#tecnologia" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Implementação CRM Kommo</span></a></li>
+              <li><a href="index.html#metodo" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Metodologia em 6 Etapas</span></a></li>
+              <li><a href="javascript:void(0)" onclick="if(window.openRoiModal){window.openRoiModal()}else{location.href='index.html#roi-calculator'}" class="text-nexxus-mint-400 hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:calculator-bold-duotone" class="text-nexxus-mint-400"></iconify-icon><span class="font-medium">Simulador de ROI B2B</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Institucional & Conteúdo (lg:col-span-2) -->
+          <div class="lg:col-span-2 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-mint-400"></span>
+              <span>Institucional</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+              <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre a Nexxus</a></li>
+              <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+              <li><a href="blog.html" class="hover:text-white transition-colors">Blog & Artigos</a></li>
+              <li><a href="index.html#diferenciais" class="hover:text-white transition-colors">Diferenciais</a></li>
+              <li><a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="links.html" class="hover:text-white transition-colors">Central de Links</a></li>
+              <li><a href="contato.html" class="hover:text-white transition-colors">Contato & Diagnóstico</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 4: Contato, Sede & Atendimento (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-400"></span>
+              <span>Contato & Sede</span>
+            </h4>
+            <div class="space-y-3.5 text-xs">
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:letter-bold" class="text-nexxus-blue-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">E-mail Corporativo</div>
+                  <a href="mailto:admin@nexxusagencia.com.br" class="text-slate-300 hover:text-white transition-colors">admin@nexxusagencia.com.br</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:map-point-bold" class="text-nexxus-mint-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light text-slate-300 leading-relaxed">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">Sede Operacional</div>
+                  <div class="text-white font-medium">Edifício Capital Corporate Office</div>
+                  <div class="text-slate-400">Ao lado do Shopping Morumbi</div>
+                  <div class="text-slate-400">São Paulo / SP — Brasil</div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="contato.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-nexxus-blue-500/10 hover:bg-nexxus-blue-500/20 border border-nexxus-blue-500/30 text-nexxus-blue-400 hover:text-white text-xs font-semibold transition-all">
+                  <iconify-icon icon="solar:chat-round-dots-bold"></iconify-icon>
+                  <span>Solicitar Diagnóstico Comercial</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-Footer: Copyright com Ano Automático & Informações Legais -->
+        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <div>
+              &copy; <span class="current-year">2026</span> Nexxus Agência Comercial. Todos os direitos reservados.
+            </div>
+            <span class="hidden sm:inline text-slate-700">•</span>
+            <div class="text-slate-400 font-mono text-[11px]">
+              Operação Comercial & Estruturação B2B
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 text-[11px] font-mono text-slate-400">
+            <span>São Paulo / SP</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-400">Alta Performance B2B</span>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        (function() {
+          var y = new Date().getFullYear();
+          var els = document.querySelectorAll('.current-year');
+          for (var i = 0; i < els.length; i++) { els[i].textContent = y; }
+        })();
+      </script>
+    </footer>
+
+  </div>
+
+  <!-- POPUP MODAL: SIMULADOR DE ROI INTERATIVO B2B -->
+  <div id="roi-modal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-xl z-50 hidden items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="glass-card rounded-[32px] max-w-2xl w-full p-6 sm:p-8 border border-nexxus-blue-500/30 shadow-[0_25px_60px_rgba(0,0,0,0.9),_inset_0_1px_1px_rgba(255,255,255,0.1)] relative overflow-hidden text-white transform scale-95 transition-transform duration-300" id="roi-modal-content">
+      <div class="bc-corner bc-corner-tl"></div><div class="bc-corner bc-corner-br"></div>
+
+      <!-- Header do Modal -->
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-nexxus-blue-500/20 border border-nexxus-blue-500/40 flex items-center justify-center text-nexxus-mint-400 text-xl shadow-glow-blue">
+            <iconify-icon icon="solar:calculator-bold-duotone"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-white uppercase font-heading tracking-wide">Simulador de ROI Comercial B2B</h3>
+            <p class="text-xs text-slate-300 font-light">Calcule instantaneamente o potencial de receita do seu comercial</p>
+          </div>
+        </div>
+
+        <button onclick="closeRoiModal()" class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 hover:border-nexxus-blue-400 text-slate-300 hover:text-white flex items-center justify-center text-lg transition-colors">
+          <iconify-icon icon="solar:close-circle-bold"></iconify-icon>
+        </button>
+      </div>
+
+      <!-- Form Inputs -->
+      <div class="space-y-6 text-left">
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs font-mono">
+            <label for="roi-spend" class="text-slate-300 font-semibold uppercase">Investimento Comercial Mensal</label>
+            <div class="flex items-center gap-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1">
+              <span class="text-nexxus-mint-400 font-bold text-xs">R$</span>
+              <input type="number" id="roi-spend-num" value="5000" min="1000" max="200000" step="500" class="w-24 bg-transparent text-nexxus-mint-400 font-bold text-sm font-mono focus:outline-none text-right">
+            </div>
+          </div>
+          <input type="range" id="roi-spend" min="3000" max="100000" step="1000" value="5000" class="w-full h-2 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-[#25c9b5]">
+          <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+            <span>R$ 3.000</span>
+            <span>R$ 50.000</span>
+            <span>R$ 100.000+</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex justify-between items-center text-xs font-mono">
+            <label for="roi-ticket" class="text-slate-300 font-semibold uppercase">Ticket Médio por Cliente / Venda</label>
+            <div class="flex items-center gap-1 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1">
+              <span class="text-nexxus-blue-400 font-bold text-xs">R$</span>
+              <input type="number" id="roi-ticket-num" value="3000" min="500" max="200000" step="500" class="w-24 bg-transparent text-nexxus-blue-400 font-bold text-sm font-mono focus:outline-none text-right">
+            </div>
+          </div>
+          <input type="range" id="roi-ticket" min="1000" max="100000" step="500" value="3000" class="w-full h-2 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-[#0175ef]">
+          <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+            <span>R$ 1.000</span>
+            <span>R$ 50.000</span>
+            <span>R$ 100.000+</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">Leads Qualificados</div>
+            <div class="text-2xl font-bold text-white font-heading mt-1" id="roi-res-leads">62</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Média CPL ~R$ 80</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">Vendas Estimadas</div>
+            <div class="text-2xl font-bold text-nexxus-mint-400 font-heading mt-1" id="roi-res-sales">5</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Taxa Conv. 7.5%</div>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 col-span-2 sm:col-span-1">
+            <div class="text-[11px] text-slate-400 uppercase font-mono">ROAS / Retorno</div>
+            <div class="text-2xl font-bold text-nexxus-blue-400 font-heading mt-1" id="roi-res-roas">3.0x</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Multiplier ROI</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-gradient-to-r from-nexxus-blue-600/20 to-nexxus-mint-500/20 border border-nexxus-blue-500/40 flex items-center justify-between">
+          <div>
+            <div class="text-xs font-mono text-slate-300 uppercase">Receita Bruta Estimada / Mês</div>
+            <div class="text-2xl sm:text-3xl font-bold text-white font-heading mt-0.5" id="roi-res-revenue">R$ 15.000,00</div>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-nexxus-mint-500 text-slate-950 flex items-center justify-center text-xl shadow-glow-mint font-bold shrink-0">
+            <iconify-icon icon="solar:graph-up-bold"></iconify-icon>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a id="roi-whatsapp-btn" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+fiz+uma+simula%C3%A7%C3%A3o+de+ROI+no+site+com+investimento+de+R%24+5000+e+gostaria+de+um+diagn%C3%B3stico" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-full bg-nexxus-mint-500 hover:bg-nexxus-mint-400 text-slate-950 font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-btn-mint">
+            <iconify-icon icon="mdi:whatsapp" class="text-lg"></iconify-icon>
+            <span>QUERO ESSES RESULTADOS NA MINHA EMPRESA</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN JAVASCRIPT ENGINES -->
+  <script>
+    // Filtering System for Articles
+    window.filterArticles = function(category, ev) {
+      const e = ev || window.event;
+      const targetBtn = e ? (e.currentTarget || e.target) : null;
+      const articles = document.querySelectorAll('.article-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-nexxus-blue-500', 'text-white', 'active-filter');
+        btn.classList.add('bg-slate-900/80', 'text-slate-300');
+      });
+
+      if (targetBtn && targetBtn.classList.contains('filter-btn')) {
+        targetBtn.classList.remove('bg-slate-900/80', 'text-slate-300');
+        targetBtn.classList.add('bg-nexxus-blue-500', 'text-white', 'active-filter');
+      }
+
+      articles.forEach(article => {
+        if (category === 'todos' || article.getAttribute('data-category') === category) {
+          article.style.display = 'flex';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    };
+
+    // Scroll Reveal Observer Engine
+    const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -40px 0px' };
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal, .reveal-scale').forEach(el => revealObserver.observe(el));
+    });
+
+    // 3. WebGL Stars Engine
+    (function initWebGLStarfield() {
+      const canvas = document.getElementById('webgl-stars');
+      if (!canvas) return;
+      const gl = canvas.getContext('webgl', { alpha: true, antialias: true, preserveDrawingBuffer: false });
+      if (!gl) return;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      function resize() {
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const vsSource = `
+        attribute vec3 position;
+        attribute float aSize;
+        attribute vec3 aColor;
+        uniform float time;
+        uniform vec2 resolution;
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          float z = mod(position.z - time * 0.05, 1.0);
+          vec2 pos = position.xy / (z * 1.85);
+          gl_Position = vec4(pos, 0.0, 1.0);
+          float depthScale = (1.0 - z);
+          gl_PointSize = aSize * depthScale * (resolution.y / 650.0);
+          vAlpha = smoothstep(0.0, 0.12, z) * smoothstep(1.0, 0.75, z) * depthScale * 0.85;
+          vColor = aColor;
+        }
+      `;
+
+      const fsSource = `
+        precision mediump float;
+        varying float vAlpha;
+        varying vec3 vColor;
+        void main() {
+          vec2 coord = gl_PointCoord - vec2(0.5);
+          float dist = length(coord);
+          if (dist > 0.5) discard;
+          float intensity = exp(-dist * 5.5) + (0.5 - dist) * 0.9;
+          gl_FragColor = vec4(vColor, intensity * vAlpha);
+        }
+      `;
+
+      function createShader(gl, type, source) {
+        const shader = gl.createShader(type);
+        gl.shaderSource(shader, source);
+        gl.compileShader(shader);
+        return shader;
+      }
+
+      const vs = createShader(gl, gl.VERTEX_SHADER, vsSource);
+      const fs = createShader(gl, gl.FRAGMENT_SHADER, fsSource);
+      const prog = gl.createProgram();
+      gl.attachShader(prog, vs);
+      gl.attachShader(prog, fs);
+      gl.linkProgram(prog);
+      gl.useProgram(prog);
+
+      const numStars = 3500;
+      const positions = new Float32Array(numStars * 3);
+      const sizes = new Float32Array(numStars);
+      const colors = new Float32Array(numStars * 3);
+
+      const colorPalette = [
+        [0.0039, 0.4588, 0.937],
+        [0.145, 0.788, 0.710],
+        [0.376, 0.647, 0.980],
+        [1.0, 1.0, 1.0]
+      ];
+
+      for (let i = 0; i < numStars; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 4.2;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 4.2;
+        positions[i * 3 + 2] = Math.random();
+        sizes[i] = Math.random() * 3.2 + 1.2;
+        const c = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+        colors[i * 3] = c[0];
+        colors[i * 3 + 1] = c[1];
+        colors[i * 3 + 2] = c[2];
+      }
+
+      const posBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, posBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
+      const posLoc = gl.getAttribLocation(prog, 'position');
+      gl.enableVertexAttribArray(posLoc);
+      gl.vertexAttribPointer(posLoc, 3, gl.FLOAT, false, 0, 0);
+
+      const sizeBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
+      const sizeLoc = gl.getAttribLocation(prog, 'aSize');
+      gl.enableVertexAttribArray(sizeLoc);
+      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 0, 0);
+
+      const colorBuffer = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, colors, gl.STATIC_DRAW);
+      const colorLoc = gl.getAttribLocation(prog, 'aColor');
+      gl.enableVertexAttribArray(colorLoc);
+      gl.vertexAttribPointer(colorLoc, 3, gl.FLOAT, false, 0, 0);
+
+      const timeLoc = gl.getUniformLocation(prog, 'time');
+      const resLoc = gl.getUniformLocation(prog, 'resolution');
+
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+
+      const startTime = performance.now();
+      function render() {
+        const time = (performance.now() - startTime) * 0.001;
+        gl.clearColor(0.0, 0.0, 0.0, 0.0);
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.uniform1f(timeLoc, time);
+        if (resLoc) gl.uniform2f(resLoc, canvas.width, canvas.height);
+        gl.drawArrays(gl.POINTS, 0, numStars);
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+
+    // 4. ROI Modal Engine
+    window.openRoiModal = function() {
+      const modal = document.getElementById('roi-modal');
+      const content = document.getElementById('roi-modal-content');
+      if (!modal) return;
+      modal.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+      modal.classList.add('flex', 'opacity-100');
+      if (content) {
+        content.classList.remove('scale-95');
+        content.classList.add('scale-100');
+      }
+      if (window.calculateRoi) window.calculateRoi();
+    };
+
+    window.closeRoiModal = function() {
+      const modal = document.getElementById('roi-modal');
+      const content = document.getElementById('roi-modal-content');
+      if (!modal) return;
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+      }, 250);
+      if (content) {
+        content.classList.remove('scale-100');
+        content.classList.add('scale-95');
+      }
+    };
+
+    window.calculateRoi = function(source = 'range') {
+      const spendRange = document.getElementById('roi-spend');
+      const spendNum = document.getElementById('roi-spend-num');
+      const ticketRange = document.getElementById('roi-ticket');
+      const ticketNum = document.getElementById('roi-ticket-num');
+
+      if (!spendRange || !ticketRange) return;
+
+      let spend, ticket;
+      if (source === 'num') {
+        spend = parseFloat(spendNum.value || 5000);
+        ticket = parseFloat(ticketNum.value || 3000);
+        spendRange.value = Math.min(spend, 100000);
+        ticketRange.value = Math.min(ticket, 100000);
+      } else {
+        spend = parseFloat(spendRange.value || 5000);
+        ticket = parseFloat(ticketRange.value || 3000);
+        if (spendNum) spendNum.value = spend;
+        if (ticketNum) ticketNum.value = ticket;
+      }
+
+      const avgCpl = 80.0;
+      const conversionRate = 0.075;
+
+      const leads = Math.round(spend / avgCpl);
+      const sales = Math.max(1, Math.round(leads * conversionRate));
+      const revenue = sales * ticket;
+      const roas = (revenue / spend).toFixed(1);
+
+      const leadsEl = document.getElementById('roi-res-leads');
+      const salesEl = document.getElementById('roi-res-sales');
+      const roasEl = document.getElementById('roi-res-roas');
+      const revEl = document.getElementById('roi-res-revenue');
+
+      if (leadsEl) leadsEl.innerText = `${leads}`;
+      if (salesEl) salesEl.innerText = `${sales}`;
+      if (roasEl) roasEl.innerText = `${roas}x`;
+      if (revEl) revEl.innerText = `R$ ${revenue.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+
+      const waBtn = document.getElementById('roi-whatsapp-btn');
+      if (waBtn) {
+        const msg = encodeURIComponent(`Olá! Fiz uma simulação de ROI no site da Nexxus (Investimento: R$ ${spend.toLocaleString('pt-BR')}, Ticket Médio: R$ ${ticket.toLocaleString('pt-BR')}) com previsão de R$ ${revenue.toLocaleString('pt-BR')} em faturamento. Gostaria de um diagnóstico comercial gratuito.`);
+        waBtn.href = `https://wa.me/5511999999999?text=${msg}`;
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const spendRange = document.getElementById('roi-spend');
+      const spendNum = document.getElementById('roi-spend-num');
+      const ticketRange = document.getElementById('roi-ticket');
+      const ticketNum = document.getElementById('roi-ticket-num');
+
+      if (spendRange) spendRange.addEventListener('input', () => window.calculateRoi('range'));
+      if (spendNum) spendNum.addEventListener('input', () => window.calculateRoi('num'));
+      if (ticketRange) ticketRange.addEventListener('input', () => window.calculateRoi('range'));
+      if (ticketNum) ticketNum.addEventListener('input', () => window.calculateRoi('num'));
+
+      const modal = document.getElementById('roi-modal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) window.closeRoiModal();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

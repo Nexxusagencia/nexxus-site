@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantas Reuniões um SDR Deve Agendar por Mês | Nexxus</title>
+  <meta name="description" content="Benchmark real de métricas e produtividade de SDR em vendas B2B. Saiba quantas reuniões qualificadas esperar e como calcular a meta.">
+  <meta name="author" content="Nexxus Agência Comercial">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://nexxusagencia.com.br/blog/quantas-reunioes-sdr-por-mes">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Nexxus">
+  <meta property="og:title" content="Quantas Reuniões um SDR Deve Agendar por Mês | Nexxus">
+  <meta property="og:description" content="O benchmark real do mercado fica entre 12 e 20 agendamentos. Veja como calcular sua meta pela margem de no-show e teto do closer.">
+  <meta property="og:image" content="https://nexxusagencia.com.br/assets/cover-reunioes-sdr.jpg">
+
+      <!-- Google Fonts: Anton (Títulos Principais), Oswald (Subtítulos dos Cards), Plus Jakarta Sans (UI, Textos & Métricas) & JetBrains Mono (Code/Metrics) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            anton: ['Anton', 'sans-serif'],
+            oswald: ['Oswald', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: { nexxus: { bg: '#020611', card: '#080E20', glass: 'rgba(9, 16, 36, 0.75)', border: 'rgba(1, 117, 239, 0.15)', blue: { DEFAULT: '#0175ef', 400: '#3b82f6', 500: '#0175ef', 600: '#1d4ed8' }, mint: { DEFAULT: '#25c9b5', 400: '#2dd4bf' } } },
+          boxShadow: { 'btn-blue': '0 10px 25px -5px rgba(1, 117, 239, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 5px rgba(29, 78, 216, 0.8)' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #020611; color: #334155; font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; overflow-x: hidden; }
+        /* Títulos Principais de Alto Impacto (H1, H2, .main-title, .title-bold): Anton */
+    h1, h2, .main-title, .title-bold {
+      font-family: 'Anton', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.035em;
+      text-transform: uppercase;
+      line-height: 1.15 !important;
+    }
+
+    /* Subtítulos dos Cards (H3, H4, H5, H6, .card-title): Oswald Condensed Regular */
+    h3, h4, h5, h6, .card-title {
+      font-family: 'Oswald', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      line-height: 1.25 !important;
+    }
+
+    /* Métricas numéricas em Plus Jakarta Sans para máxima legibilidade */
+    .counter-val {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+    }
+    .glass-card { background: rgba(8, 14, 32, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(1, 117, 239, 0.15); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); }
+    .btn-conic-spin { position: relative; display: inline-flex; align-items: center; justify-content: center; padding: 14px 28px; border-radius: 9999px; background: #050b1e; color: #FFF; font-weight: 600; cursor: pointer; overflow: hidden; isolation: isolate; }
+    .btn-conic-spin::before { content: ''; position: absolute; top: -250%; left: -250%; width: 600%; height: 600%; background: conic-gradient(from 0deg, rgba(1, 117, 239, 0.05) 0deg, #0175ef 250deg, #25c9b5 320deg, rgba(1, 117, 239, 0.05) 360deg); z-index: -2; animation: spin-conic-universal 4s linear infinite; }
+    .btn-conic-spin::after { content: ''; position: absolute; inset: 1.5px; border-radius: 9999px; background: #050b1e; z-index: -1; }
+    @keyframes spin-conic-universal { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="relative min-h-screen antialiased bg-slate-950 text-slate-800">
+
+  <!-- Barra de Progresso de Leitura Fixa no Topo -->
+  <div id="reading-progress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-nexxus-blue-500 via-nexxus-mint-400 to-nexxus-blue-400 z-[9999] transition-all duration-75 w-0"></div>
+
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <header class="sticky top-4 z-50 px-3 md:px-8 max-w-7xl mx-auto w-full">
+      <nav class="glass-card rounded-full px-4 md:px-6 py-3.5 flex items-center justify-between shadow-2xl relative whitespace-nowrap">
+        <div class="flex items-center gap-3 shrink-0 mr-4 xl:mr-8">
+          <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap">
+            <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 sm:h-8 w-auto select-none">
+          </a>
+          <span class="hidden md:inline-block text-slate-600">|</span>
+          <span class="hidden md:inline-block text-xs font-mono text-slate-400 font-medium">Blog</span>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-gray-300 whitespace-nowrap shrink-0 mr-2 xl:mr-4">
+          <a href="index.html" class="hover:text-nexxus-blue-400 transition-colors">Início</a>
+          <a href="sobre.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre</a>
+          <a href="servicos.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a>
+          <a href="blog.html" class="hover:text-nexxus-blue-400 transition-colors font-bold text-white">Blog</a>
+          <a href="links.html" class="hover:text-nexxus-blue-400 transition-colors">Links</a>
+          <a href="contato.html" class="hover:text-nexxus-blue-400 transition-colors">Contato</a>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <a href="contato.html" class="btn-conic-spin text-xs uppercase tracking-wider px-5 py-2.5">
+            <span class="relative z-10 flex items-center gap-2 font-bold text-white">
+              <iconify-icon icon="solar:phone-calling-bold" class="text-nexxus-mint-400 text-sm"></iconify-icon>
+              <span>Diagnóstico Grátis</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-full bg-white border-y border-slate-200/80 my-8 py-12 md:py-16 text-slate-900 overflow-hidden relative z-10">
+      <div class="max-w-4xl mx-auto px-4 md:px-8 relative z-10 space-y-8">
+        
+        <div class="space-y-4">
+          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono text-slate-600">
+            <a href="index.html" class="hover:text-nexxus-blue-600 transition-colors">Início</a>
+            <span class="text-slate-400">/</span>
+            <a href="blog.html" class="hover:text-nexxus-blue-600 transition-colors">Blog</a>
+            <span class="text-slate-400">/</span>
+            <span class="text-nexxus-blue-600 font-semibold truncate max-w-[200px] sm:max-w-xs">Quantas Reuniões um SDR Deve Agendar por Mês</span>
+          </nav>
+
+          <div>
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-xs font-mono text-nexxus-blue-600 font-bold uppercase tracking-wider">
+              Métricas & SDR
+            </span>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h1 class="text-3xl sm:text-5xl font-bold text-slate-950 uppercase leading-tight font-heading">
+            Quantas Reuniões um SDR Deve Agendar por Mês
+          </h1>
+          <p class="text-slate-600 font-light text-base sm:text-lg leading-relaxed">
+            O benchmark real do mercado fica entre 12 e 20 agendamentos. Veja como calcular sua meta pela margem de no-show e teto do closer.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 py-4 border-y border-slate-200 text-xs font-mono text-slate-500">
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:user-bold" class="text-nexxus-blue-600 text-sm"></iconify-icon>
+              <span>Equipe Nexxus</span>
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:calendar-bold" class="text-slate-400 text-sm"></iconify-icon>
+              <span>25 de Agosto de 2026</span>
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-2">
+              <iconify-icon icon="solar:clock-circle-bold" class="text-slate-400 text-sm"></iconify-icon>
+              <span>5 min de leitura</span>
+            </div>
+          </div>
+
+          <!-- Botões de Compartilhamento -->
+          <div class="flex items-center gap-2">
+            <button id="copy-btn" onclick="copyArticleLink()" class="p-2 px-3 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 hover:border-nexxus-blue-600 text-slate-700 hover:text-nexxus-blue-600 transition-all flex items-center gap-1.5 text-xs font-bold font-mono">
+              <iconify-icon icon="solar:link-bold" class="text-sm text-nexxus-blue-600"></iconify-icon>
+              <span id="copy-text">Copiar Link</span>
+            </button>
+            <a href="https://api.whatsapp.com/send?text=Quantas%20Reuni%C3%B5es%20um%20SDR%20Deve%20Agendar%20por%20M%C3%AAs%20-%20Nexxus%20https%3A%2F%2Fnexxusagencia.com.br%2Fblog%2Fquantas-reunioes-sdr-por-mes" target="_blank" rel="noopener noreferrer" title="Compartilhar no WhatsApp" class="p-2 px-3 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-700 transition-all flex items-center gap-1.5 text-xs font-bold font-mono">
+              <iconify-icon icon="mdi:whatsapp" class="text-sm text-emerald-600"></iconify-icon>
+              <span class="hidden sm:inline">WhatsApp</span>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fnexxusagencia.com.br%2Fblog%2Fquantas-reunioes-sdr-por-mes" target="_blank" rel="noopener noreferrer" title="Compartilhar no LinkedIn" class="p-2 px-3 rounded-lg bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-700 transition-all flex items-center gap-1.5 text-xs font-bold font-mono">
+              <iconify-icon icon="line-md:linkedin" class="text-sm text-blue-600"></iconify-icon>
+              <span class="hidden sm:inline">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl">
+          <img src="nexxusagencia.com.br/assets/cover-reunioes-sdr.jpg" alt="Quantas Reuniões um SDR Deve Agendar por Mês" class="w-full h-auto max-h-[480px] object-cover">
+        </div>
+
+        <!-- ÍNDICE RÁPIDO DO ARTIGO (TABLE OF CONTENTS) -->
+        <div class="my-6 p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
+          <div class="flex items-center gap-2 text-xs font-mono font-bold uppercase text-slate-800 mb-3 tracking-wider">
+            <iconify-icon icon="solar:list-check-bold" class="text-nexxus-blue-600 text-base"></iconify-icon>
+            <span>Neste Artigo (Índice Rápido):</span>
+          </div>
+          <ol class="space-y-2 text-sm text-slate-700 font-light">
+            <li>
+              <a href="#benchmark-mercado" class="hover:text-nexxus-blue-600 hover:underline flex items-baseline gap-2 transition-colors">
+                <span class="font-mono text-xs font-bold text-nexxus-blue-600">01.</span>
+                <span>O Benchmark Real do Mercado B2B em 2026</span>
+              </a>
+            </li>
+            <li>
+              <a href="#fatores-custo" class="hover:text-nexxus-blue-600 hover:underline flex items-baseline gap-2 transition-colors">
+                <span class="font-mono text-xs font-bold text-nexxus-blue-600">02.</span>
+                <span>Fatores que Impactam o Custo por Agendamento</span>
+              </a>
+            </li>
+            <li>
+              <a href="#conclusao" class="hover:text-nexxus-blue-600 hover:underline flex items-baseline gap-2 transition-colors">
+                <span class="font-mono text-xs font-bold text-nexxus-blue-600">03.</span>
+                <span>Conclusão & Dimensionamento de Metas</span>
+              </a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="prose prose-slate max-w-none space-y-6 pt-4 text-slate-700 font-light leading-relaxed">
+          <p class="text-lg text-slate-700 font-normal leading-relaxed mb-8">
+            Definir metas irrealistas para SDRs é a principal causa de desmotivação e turnover em times de pré-vendas. Qual é o benchmark real do mercado B2B para reuniões qualificadas agendadas e realizadas por mês?
+          </p>
+
+          <h2 id="benchmark-mercado" class="text-2xl md:text-3xl font-bold text-slate-950 uppercase font-heading mt-10 mb-4 border-b border-slate-200 pb-3 scroll-mt-28">
+            1. O Benchmark Real do Mercado B2B em 2026
+          </h2>
+          <p class="text-slate-700 font-light leading-relaxed mb-6">
+            Em vendas B2B complexas (ticket acima de R$ 5k/mês ou R$ 50k de LTV), a média de produtividade saudável para um SDR dedicado fica entre <strong>12 e 20 reuniões qualificadas realizadas</strong> por mês.
+          </p>
+
+          <figure class="my-10 rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
+            <img src="nexxusagencia.com.br/assets/article-benchmark-sdr-metricas.jpg" alt="Dashboard de Métricas e KPIs de SDR" class="w-full h-auto object-cover">
+            <figcaption class="p-3 bg-slate-100 text-xs text-slate-600 font-mono text-center border-t border-slate-200">
+              Figura 1: Painel de controle de métricas do SDR: chamadas realizadas, leads contactados e reuniões agendadas por mês.
+            </figcaption>
+          </figure>
+
+          <h2 id="fatores-custo" class="text-2xl md:text-3xl font-bold text-slate-950 uppercase font-heading mt-10 mb-4 border-b border-slate-200 pb-3 scroll-mt-28">
+            2. Fatores que Impactam o Custo por Agendamento
+          </h2>
+          <p class="text-slate-700 font-light leading-relaxed mb-6">
+            Complexidade do ICP, presença de decisores no LinkedIn, nível de maturidade da marca e taxa de no-show. A squad Nexxus atua ativamente no lembrete multicanal para manter a taxa de no-show abaixo de 15%.
+          </p>
+
+          <figure class="my-10 rounded-2xl overflow-hidden border border-slate-200 shadow-xl">
+            <img src="nexxusagencia.com.br/assets/article-reducao-noshow-reuniao.jpg" alt="Fluxo de Qualificação e Redução de No-Show" class="w-full h-auto object-cover">
+            <figcaption class="p-3 bg-slate-100 text-xs text-slate-600 font-mono text-center border-t border-slate-200">
+              Figura 2: Dashboard de qualificação de reuniões e automação de confirmação de presença (redução de no-show).
+            </figcaption>
+          </figure>
+
+          <div id="conclusao" class="bg-slate-50 p-6 rounded-2xl border border-nexxus-blue-500/30 my-8 scroll-mt-28">
+            <h3 class="text-xl font-bold text-nexxus-blue-600 uppercase font-heading mb-3">Conclusão & Dimensionamento de Metas</h3>
+            <p class="text-slate-700 text-sm font-light leading-relaxed">
+              Mais vale uma cadência que gere 14 reuniões de decisores prontos para comprar do que 40 agendamentos sem perfil de compra que consomem o tempo precioso dos Closers.
+            </p>
+          </div>
+        </div>
+
+        <!-- SEÇÃO ARTIGOS RELACIONADOS -->
+        <div class="pt-10 border-t border-slate-200 my-8">
+          <div class="flex items-center justify-between mb-6">
+            <div class="space-y-1">
+              <span class="text-xs font-mono font-bold uppercase text-nexxus-blue-600 tracking-wider">Continue Lendo</span>
+              <h3 class="text-2xl font-bold text-slate-950 uppercase font-heading">Artigos Relacionados</h3>
+            </div>
+            <a href="blog.html" class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-nexxus-blue-600 hover:text-nexxus-blue-700 transition-colors uppercase">
+              <span>Ver todos</span>
+              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Card Relacionado 1 -->
+            <a href="quem-fecha-a-venda-prospeccao-terceirizada.html" class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-nexxus-blue-500/50 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="h-40 rounded-xl overflow-hidden border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-quem-fecha-venda.jpg" alt="Quem Fecha a Venda Quando a Prospecção é Terceirizada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <span class="inline-block px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-mono font-bold uppercase">Terceirização Comercial</span>
+                <h4 class="text-base font-bold text-slate-950 uppercase font-heading group-hover:text-nexxus-blue-600 transition-colors">
+                  Quem Fecha a Venda Quando a Prospecção é Terceirizada
+                </h4>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Passagem de bastão entre squad externa e Closer interno e a divisão de papéis.
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1 text-xs font-bold text-nexxus-blue-600 mt-4 font-mono">
+                Ler artigo <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </span>
+            </a>
+
+            <!-- Card Relacionado 2 -->
+            <a href="tendencias-mercado-comercial-b2b.html" class="group p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-nexxus-blue-500/50 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="h-40 rounded-xl overflow-hidden border border-slate-200">
+                  <img src="nexxusagencia.com.br/assets/cover-tendencias-b2b-laptop.png" alt="Tendências do Mercado Comercial B2B" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <span class="inline-block px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-mono font-bold uppercase">Vendas B2B</span>
+                <h4 class="text-base font-bold text-slate-950 uppercase font-heading group-hover:text-nexxus-blue-600 transition-colors">
+                  Tendências do Mercado Comercial B2B: O que Muda
+                </h4>
+                <p class="text-xs text-slate-600 font-light leading-relaxed">
+                  Inteligência de intenção, cadências multicanais e o fim das listas frias genéricas.
+                </p>
+              </div>
+              <span class="inline-flex items-center gap-1 text-xs font-bold text-nexxus-blue-600 mt-4 font-mono">
+                Ler artigo <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <div class="my-12 p-8 md:p-10 rounded-3xl bg-slate-950 text-white border border-nexxus-blue-500/30 text-center space-y-6 shadow-2xl relative overflow-hidden">
+          <div class="max-w-2xl mx-auto space-y-3 relative z-10">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-nexxus-mint-500/10 border border-nexxus-mint-500/30 text-nexxus-mint-400 text-xs font-mono font-bold uppercase tracking-wider">
+              Acelere sua operação B2B
+            </span>
+            <h3 class="text-2xl sm:text-4xl font-bold text-white uppercase font-heading">
+              Quer aplicar este método na sua empresa em <span class="text-nexxus-mint-400">20 dias</span>?
+            </h3>
+            <p class="text-slate-300 text-sm font-light leading-relaxed">
+              Agende um Diagnóstico Gratuito com os consultores sêniores da Nexxus. Avaliamos seu mercado e apresentamos o plano ideal de terceirização comercial.
+            </p>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
+            <a href="contato.html" class="px-8 py-4 rounded-full bg-nexxus-blue-500 hover:bg-nexxus-blue-600 text-white font-bold text-xs uppercase tracking-wider shadow-btn-blue transition-all inline-flex items-center gap-2">
+              <span>AGENDAR DIAGNÓSTICO GRATUITO</span>
+              <iconify-icon icon="solar:arrow-right-linear" class="text-base"></iconify-icon>
+            </a>
+            <a href="blog.html" class="px-6 py-4 rounded-full bg-slate-900 border border-slate-800 text-slate-300 hover:text-white font-bold text-xs uppercase font-mono tracking-wider transition-all">
+              Voltar ao Blog
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+    <footer class="mt-20 border-t border-white/10 bg-slate-950 py-16 text-slate-400 text-sm relative z-10 selection:bg-nexxus-blue-500/30 selection:text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Grid Superior: 4 Colunas Estruturadas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+          
+          <!-- Coluna 1: Marca, Missão & Redes Sociais (lg:col-span-4) -->
+          <div class="lg:col-span-4 space-y-4 text-left">
+            <a href="index.html" class="inline-flex items-center gap-2.5 group">
+              <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus Agência Comercial" class="h-8 w-auto select-none transition-transform group-hover:scale-105">
+            </a>
+
+            <p class="text-xs text-slate-400 font-light leading-relaxed max-w-sm">
+              A Nexxus estrutura e opera o setor comercial da sua empresa com método proprietário, inteligência de dados e equipe dedicada (SDR, Hunter e Closer). Operação no ar em 20 dias.
+            </p>
+
+            <!-- Status Operacional -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Operação Comercial B2B Ativa</span>
+            </div>
+
+            <!-- Canais Sociais -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="https://www.instagram.com/nexxus.inc/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-mint-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Instagram @nexxus.inc" aria-label="Instagram">
+                <iconify-icon icon="line-md:instagram" class="group-hover:text-nexxus-mint-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://linkedin.com/company/nexxus-ag%C3%AAncia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="LinkedIn Nexxus" aria-label="LinkedIn">
+                <iconify-icon icon="line-md:linkedin" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+um+diagn%C3%B3stico+comercial+com+a+Nexxus" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="WhatsApp Comercial" aria-label="WhatsApp">
+                <svg class="w-5 h-5 text-white group-hover:text-emerald-400 transition-colors fill-current" viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/>
+                </svg>
+              </a>
+              <a href="links.html" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Central de Links" aria-label="Central de Links">
+                <iconify-icon icon="solar:link-circle-bold" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Soluções Comerciais (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-500"></span>
+              <span>Soluções</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="servicos.html#terceirizacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Terceirização Comercial (BPO)</span></a></li>
+              <li><a href="servicos.html#estruturacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Estruturação de Vendas B2B</span></a></li>
+              <li><a href="servicos.html#mentoria" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Mentoria & Treinamento SDR/Closer</span></a></li>
+              <li><a href="servicos.html#tecnologia" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Implementação CRM Kommo</span></a></li>
+              <li><a href="index.html#metodo" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Metodologia em 6 Etapas</span></a></li>
+              <li><a href="javascript:void(0)" onclick="if(window.openRoiModal){window.openRoiModal()}else{location.href='index.html#roi-calculator'}" class="text-nexxus-mint-400 hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:calculator-bold-duotone" class="text-nexxus-mint-400"></iconify-icon><span class="font-medium">Simulador de ROI B2B</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Institucional & Conteúdo (lg:col-span-2) -->
+          <div class="lg:col-span-2 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-mint-400"></span>
+              <span>Institucional</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+              <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre a Nexxus</a></li>
+              <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+              <li><a href="blog.html" class="hover:text-white transition-colors">Blog & Artigos</a></li>
+              <li><a href="index.html#diferenciais" class="hover:text-white transition-colors">Diferenciais</a></li>
+              <li><a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="links.html" class="hover:text-white transition-colors">Central de Links</a></li>
+              <li><a href="contato.html" class="hover:text-white transition-colors">Contato & Diagnóstico</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 4: Contato, Sede & Atendimento (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-400"></span>
+              <span>Contato & Sede</span>
+            </h4>
+            <div class="space-y-3.5 text-xs">
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:letter-bold" class="text-nexxus-blue-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">E-mail Corporativo</div>
+                  <a href="mailto:admin@nexxusagencia.com.br" class="text-slate-300 hover:text-white transition-colors">admin@nexxusagencia.com.br</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:map-point-bold" class="text-nexxus-mint-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light text-slate-300 leading-relaxed">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">Sede Operacional</div>
+                  <div class="text-white font-medium">Edifício Capital Corporate Office</div>
+                  <div class="text-slate-400">Ao lado do Shopping Morumbi</div>
+                  <div class="text-slate-400">São Paulo / SP — Brasil</div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="contato.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-nexxus-blue-500/10 hover:bg-nexxus-blue-500/20 border border-nexxus-blue-500/30 text-nexxus-blue-400 hover:text-white text-xs font-semibold transition-all">
+                  <iconify-icon icon="solar:chat-round-dots-bold"></iconify-icon>
+                  <span>Solicitar Diagnóstico Comercial</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-Footer: Copyright com Ano Automático & Informações Legais -->
+        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <div>
+              &copy; <span class="current-year">2026</span> Nexxus Agência Comercial. Todos os direitos reservados.
+            </div>
+            <span class="hidden sm:inline text-slate-700">•</span>
+            <div class="text-slate-400 font-mono text-[11px]">
+              Operação Comercial & Estruturação B2B
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 text-[11px] font-mono text-slate-400">
+            <span>São Paulo / SP</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-400">Alta Performance B2B</span>
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        (function() {
+          var y = new Date().getFullYear();
+          var els = document.querySelectorAll('.current-year');
+          for (var i = 0; i < els.length; i++) { els[i].textContent = y; }
+        })();
+      </script>
+    </footer>
+
+  </div>
+
+  <script>
+    // Barra de Progresso de Leitura Fluida
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      const bar = document.getElementById('reading-progress');
+      if (bar) bar.style.width = scrolled + '%';
+    });
+
+    // Copiar Link com Feedback Visual Dinâmico
+    window.copyArticleLink = function() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        const text = document.getElementById('copy-text');
+        if (text) {
+          const original = text.textContent;
+          text.textContent = 'Copiado!';
+          text.classList.add('text-emerald-600');
+          setTimeout(() => {
+            text.textContent = original;
+            text.classList.remove('text-emerald-600');
+          }, 2000);
+        }
+      }).catch(() => {
+        alert('Link copiado!');
+      });
+    };
+  </script>
+</body>
+</html>

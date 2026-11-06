@@ -17,10 +17,10 @@
   <meta property="og:description" content="Entre em contato com a Nexxus e solicite um diagnóstico para estruturar, operar ou desenvolver a área comercial da sua empresa. Atendimento consultivo e resposta em até 12 horas.">
   <meta property="og:image" content="https://nexxusagencia.com.br/og-image.jpg">
 
-  <!-- Google Fonts: Oswald (Headings), Plus Jakarta Sans / Nexa Fallback (Body), JetBrains Mono (Code) -->
+      <!-- Google Fonts: Anton (Títulos Principais), Oswald (Subtítulos dos Cards), Plus Jakarta Sans (UI, Textos & Métricas) & JetBrains Mono (Code/Metrics) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +36,9 @@
         extend: {
           fontFamily: {
             heading: ['Oswald', 'sans-serif'],
-            sans: ['Nexa', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            anton: ['Anton', 'sans-serif'],
+            oswald: ['Oswald', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
@@ -78,33 +80,42 @@
 
   <!-- Custom CSS -->
   <style>
-    @font-face {
-      font-family: 'Nexa';
-      src: local('Nexa Bold'), local('Nexa Light'), local('Plus Jakarta Sans');
-    }
 
     body {
       background-color: #020611;
       color: #93C5FD;
-      font-family: 'Nexa', 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
       overflow-x: hidden;
     }
 
+        /* Títulos Principais de Alto Impacto (H1, H2, .main-title, .title-bold): Anton */
     h1, h2, .main-title, .title-bold {
-      font-family: 'Oswald', sans-serif !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.025em;
+      font-family: 'Anton', sans-serif !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.035em;
       text-transform: uppercase;
-      line-height: 1.25 !important;
-      color: #FFFFFF;
+      line-height: 1.15 !important;
     }
 
-    h3, h4, h5, h6, .card-title, .subtitle, .section-subtitle {
+    /* Subtítulos dos Cards (H3, H4, H5, H6, .card-title): Oswald Condensed Regular */
+    h3, h4, h5, h6, .card-title {
       font-family: 'Oswald', sans-serif !important;
       font-weight: 400 !important;
       letter-spacing: 0.025em;
       text-transform: uppercase;
       line-height: 1.25 !important;
+    }
+
+    /* Métricas numéricas em Plus Jakarta Sans para máxima legibilidade */
+    .counter-val {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+    }
+
+    .subtitle, .section-subtitle, .subheadline {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.01em;
+      line-height: 1.5 !important;
       color: #FFFFFF;
     }
 
@@ -261,14 +272,35 @@
       box-shadow: 0 0 12px rgba(239, 68, 68, 0.35) !important;
     }
 
-    /* Scroll Reveal with Blur */
+    /* Keyframe Animations & Staggered Reveal Effects */
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    .hero-anim-1 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+    .hero-anim-2 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; opacity: 0; }
+    .hero-anim-3 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+    .hero-anim-4 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards; opacity: 0; }
+    .hero-anim-5 { animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; opacity: 0; }
+
+    /* Scroll Reveal Modes */
     .reveal {
       opacity: 0;
       filter: blur(10px);
-      transform: translateY(20px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(25px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
     }
     .reveal.active {
       opacity: 1;
@@ -276,66 +308,48 @@
       transform: translateY(0);
     }
 
-    /* Custom Cursor Trail */
-    @media (pointer: fine) {
-      html, body, a, button, input, select, textarea, [role="button"], .glass-card {
-        cursor: none !important;
-      }
-    }
-    #cursor-dot {
-      position: fixed; top: 0; left: 0;
-      width: 8px; height: 8px;
-      background-color: #25c9b5;
-      border-radius: 50%; pointer-events: none; z-index: 9999;
-      box-shadow: 0 0 12px #25c9b5, 0 0 25px #0175ef;
-      transform: translate3d(-50%, -50%, 0);
-      transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
-    }
-    #cursor-ring {
-      position: fixed; top: 0; left: 0;
-      width: 36px; height: 36px;
-      border: 1.5px solid rgba(1, 117, 239, 0.6);
-      border-radius: 50%; pointer-events: none; z-index: 9998;
-      transform: translate3d(-50%, -50%, 0);
-      transition: width 0.25s ease-out, height 0.25s ease-out, border-color 0.25s ease-out, opacity 0.2s ease;
-      box-shadow: 0 0 15px rgba(1, 117, 239, 0.2);
-    }
-    #cursor-arrow {
-      position: fixed; top: 0; left: 0;
-      width: 26px; height: 26px;
-      pointer-events: none; z-index: 10001;
+    .reveal-3d-rotate {
       opacity: 0;
-      transform: translate3d(-50%, -50%, 0) scale(0.3) rotate(-20deg);
-      transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      filter: drop-shadow(0 0 10px rgba(1, 117, 239, 0.9)) drop-shadow(0 0 18px rgba(37, 201, 181, 0.6));
+      filter: blur(8px);
+      transform: perspective(1000px) rotateX(15deg) translateY(35px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
     }
-    #cursor-arrow.active {
+    .reveal-3d-rotate.active {
       opacity: 1;
-      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+      filter: blur(0);
+      transform: perspective(1000px) rotateX(0deg) translateY(0);
     }
-    #cursor-dot.menu-hover,
-    #cursor-ring.menu-hover {
-      opacity: 0 !important;
-      visibility: hidden !important;
+
+    .reveal-scale {
+      opacity: 0;
+      filter: blur(10px);
+      transform: scale(0.94) translateY(25px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, filter, transform;
     }
+    .reveal-scale.active {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1) translateY(0);
+    }
+
+    /* Stagger Delays */
+    .delay-1 { transition-delay: 0.08s !important; }
+    .delay-2 { transition-delay: 0.16s !important; }
+    .delay-3 { transition-delay: 0.24s !important; }
+    .delay-4 { transition-delay: 0.32s !important; }
+    .delay-5 { transition-delay: 0.40s !important; }
+    .delay-6 { transition-delay: 0.48s !important; }
+    .delay-7 { transition-delay: 0.56s !important; }
+    .delay-8 { transition-delay: 0.64s !important; }
   </style>
 </head>
 <body class="relative min-h-screen antialiased selection:bg-nexxus-blue-500/30 selection:text-white">
-  <!-- Custom Interactive Cursor Trail -->
-  <div id="cursor-dot"></div>
-  <div id="cursor-ring"></div>
-  <div id="cursor-arrow">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 2L20 11L11.5 13.5L8.5 21L3 2Z" fill="url(#arrowGrad)" stroke="#25c9b5" stroke-width="1.5" stroke-linejoin="round"/>
-      <path d="M5.5 5.5L15.5 10.8L10.5 12.2L8.5 17L5.5 5.5Z" fill="#FFFFFF" opacity="0.6"/>
-      <defs>
-        <linearGradient id="arrowGrad" x1="3" y1="2" x2="20" y2="21" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#0175ef"/>
-          <stop offset="1" stop-color="#25c9b5"/>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
 
   <!-- Interactive WebGL Canvas Shader Background -->
   <canvas id="webgl-stars" class="fixed inset-0 z-0 pointer-events-none opacity-60"></canvas>
@@ -354,7 +368,7 @@
         
         <!-- Logo -->
         <div class="flex items-center gap-3 shrink-0 mr-4 xl:mr-8">
-          <a href="index-nexxus.html" class="flex items-center gap-2.5 whitespace-nowrap">
+          <a href="index.html" class="flex items-center gap-2.5 whitespace-nowrap">
             <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 sm:h-8 w-auto select-none">
           </a>
           <span class="hidden md:inline-block text-slate-600">|</span>
@@ -363,16 +377,15 @@
 
         <!-- Links Internos -->
         <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs xl:text-sm font-medium text-gray-300 whitespace-nowrap shrink-0 mr-2 xl:mr-4">
-          <a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors flex items-center gap-1.5">
+          <a href="index.html" class="hover:text-nexxus-blue-400 transition-colors flex items-center gap-1.5">
             <iconify-icon icon="solar:home-2-bold" class="text-sm text-nexxus-blue-400"></iconify-icon>
             Início
           </a>
-          <a href="sobre-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre</a>
-          <a href="servicos-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a>
-          <a href="#formulario" class="hover:text-nexxus-blue-400 transition-colors">Formulário</a>
-          <a href="#canais" class="hover:text-nexxus-blue-400 transition-colors">Canais</a>
-          <a href="#localizacao" class="hover:text-nexxus-blue-400 transition-colors">Localização</a>
-          <a href="#faq-contato" class="hover:text-nexxus-blue-400 transition-colors">FAQ</a>
+          <a href="sobre.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre</a>
+          <a href="servicos.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a>
+          <a href="blog.html" class="hover:text-nexxus-blue-400 transition-colors">Blog</a>
+          <a href="links.html" class="hover:text-nexxus-blue-400 transition-colors">Links</a>
+          <a href="contato.html" class="hover:text-nexxus-blue-400 transition-colors font-bold text-white">Contato</a>
         </div>
 
         <!-- Botões CTA -->
@@ -391,27 +404,27 @@
     <main class="flex-1 space-y-16 md:space-y-24 py-8">
 
       <!-- SEÇÃO 1: HERO DE CONTATO -->
-      <section id="hero" class="relative px-4 md:px-8 max-w-7xl mx-auto w-full pt-8 md:pt-12 reveal">
+      <section id="hero" class="relative px-4 md:px-8 max-w-7xl mx-auto w-full pt-8 md:pt-12">
         <div class="text-center max-w-4xl mx-auto space-y-6">
           
           <!-- Breadcrumb Navigation -->
-          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400">
+          <nav class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs font-mono text-slate-400 hero-anim-1">
             <a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Home</a>
             <span class="text-slate-600">/</span>
             <span class="text-nexxus-blue-400 font-semibold">Contato</span>
           </nav>
 
-          <div class="block">
+          <div class="block hero-anim-2">
             <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-xs font-mono text-nexxus-blue-400 font-bold uppercase tracking-wider">
               Atendimento Consultivo · Resposta em até 12 Horas
             </span>
           </div>
 
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white uppercase leading-tight max-w-4xl mx-auto">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-wide text-white uppercase leading-tight max-w-4xl mx-auto hero-anim-3">
             Vamos Conversar Sobre a <span class="highlight-blue">Operação Comercial da Sua Empresa</span>?
           </h1>
 
-          <p class="text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto leading-relaxed">
+          <p class="text-base md:text-lg text-slate-300 font-light max-w-2xl mx-auto leading-relaxed hero-anim-4">
             Preencha o formulário abaixo ou entre em contato diretamente com nossa equipe. Realizamos um diagnóstico comercial sem compromisso para identificar gargalos e recomendar a solução ideal.
           </p>
 
@@ -423,7 +436,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
           <!-- COLUNA ESQUERDA: FORMULÁRIO EM DESTAQUE -->
-          <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-10 border border-nexxus-blue-500/30 relative shadow-2xl">
+          <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-10 border border-nexxus-blue-500/30 relative shadow-2xl reveal-3d-rotate">
             <div class="bc-corner bc-corner-tl"></div><div class="bc-corner bc-corner-br"></div>
 
             <div class="space-y-6">
@@ -529,7 +542,7 @@
           <div class="lg:col-span-5 space-y-6">
 
             <!-- Card Resposta Rápida -->
-            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-nexxus-blue-500/30 text-left space-y-4">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-nexxus-blue-500/30 text-left space-y-4 reveal-scale delay-1">
               <div class="w-12 h-12 rounded-2xl bg-nexxus-blue-500/20 border border-nexxus-blue-500/40 flex items-center justify-center text-nexxus-blue-400 text-2xl">
                 <iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
               </div>
@@ -544,7 +557,7 @@
             </div>
 
             <!-- Card Canais Diretos -->
-            <div id="canais" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-5">
+            <div id="canais" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-5 reveal-scale delay-2">
               <h3 class="text-lg font-bold text-white uppercase font-heading">Canais de Contato Direto</h3>
 
               <div class="space-y-4 text-xs sm:text-sm">
@@ -562,7 +575,7 @@
                 <!-- WhatsApp -->
                 <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+a+estrutura+comercial+da+minha+empresa" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800 hover:border-nexxus-mint-500 transition-colors group">
                   <div class="w-10 h-10 rounded-xl bg-nexxus-mint-500/20 flex items-center justify-center text-nexxus-mint-400 text-xl shrink-0 group-hover:scale-110 transition-transform">
-                    <iconify-icon icon="line-md:whatsapp"></iconify-icon>
+                    <iconify-icon icon="mdi:whatsapp"></iconify-icon>
                   </div>
                   <div>
                     <div class="text-[11px] font-mono text-slate-400 uppercase">WhatsApp Oficial</div>
@@ -573,7 +586,7 @@
             </div>
 
             <!-- Card Localização -->
-            <div id="localizacao" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-4">
+            <div id="localizacao" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 text-left space-y-4 reveal-scale delay-3">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-nexxus-blue-500/20 flex items-center justify-center text-nexxus-blue-400 text-xl shrink-0">
                   <iconify-icon icon="solar:map-point-bold-duotone"></iconify-icon>
@@ -612,25 +625,25 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left reveal-scale delay-1">
             <div class="text-xs font-mono text-nexxus-blue-400 font-bold uppercase">Passo 01</div>
             <h3 class="text-lg font-normal text-white uppercase font-heading">Análise das Informações</h3>
             <p class="text-xs text-slate-300 font-light leading-relaxed">Nosso time analisa seu segmento e desafio antes de ligar.</p>
           </div>
 
-          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left reveal-scale delay-2">
             <div class="text-xs font-mono text-nexxus-blue-400 font-bold uppercase">Passo 02</div>
             <h3 class="text-lg font-normal text-white uppercase font-heading">Contato em 12 Horas</h3>
             <p class="text-xs text-slate-300 font-light leading-relaxed">Entramos em contato para agendar uma conversa rápida de alinhamento.</p>
           </div>
 
-          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left reveal-scale delay-3">
             <div class="text-xs font-mono text-nexxus-mint-400 font-bold uppercase">Passo 03</div>
             <h3 class="text-lg font-normal text-white uppercase font-heading">Diagnóstico Comercial</h3>
             <p class="text-xs text-slate-300 font-light leading-relaxed">Reunião presencial ou online para mapear gargalos e metas.</p>
           </div>
 
-          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left">
+          <div class="glass-card p-6 rounded-2xl border border-white/10 space-y-3 relative text-left reveal-scale delay-4">
             <div class="text-xs font-mono text-nexxus-mint-400 font-bold uppercase">Passo 04</div>
             <h3 class="text-lg font-normal text-white uppercase font-heading">Plano de Ação</h3>
             <p class="text-xs text-slate-300 font-light leading-relaxed">Apresentação da proposta com squad, processo e prazos em 20 dias.</p>
@@ -716,67 +729,151 @@
 
     </main>
 
-    <!-- FOOTER INSTITUCIONAL COMPLETO -->
-    <footer class="mt-16 border-t border-white/10 bg-slate-950 py-16 text-slate-400 text-sm relative z-10">
-      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+        <!-- ============================================================
+         RODAPÉ INSTITUCIONAL PADRONIZADO (NEXXUS)
+         ============================================================ -->
+    <footer class="mt-20 border-t border-white/10 bg-slate-950 py-16 text-slate-400 text-sm relative z-10 selection:bg-nexxus-blue-500/30 selection:text-white">
+      <div class="max-w-7xl mx-auto px-6">
         
-        <!-- Coluna 1: Marca -->
-        <div class="md:col-span-5 space-y-4">
-          <div class="flex items-center gap-3">
-            <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus" class="h-7 w-auto select-none">
-          </div>
-
-          <p class="text-xs text-slate-400 font-light leading-relaxed max-w-sm">
-            A Nexxus estrutura e opera o comercial da sua empresa com método, dados e um time pronto: terceirização comercial, mentoria e estruturação de vendas.
-          </p>
-
-          <div class="flex items-center gap-3 pt-2">
-            <a href="https://www.instagram.com/nexxus.inc/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-mint-500 flex items-center justify-center text-white transition-all group">
-              <svg class="w-5 h-5 text-white group-hover:text-nexxus-mint-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <!-- Grid Superior: 4 Colunas Estruturadas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/10">
+          
+          <!-- Coluna 1: Marca, Missão & Redes Sociais (lg:col-span-4) -->
+          <div class="lg:col-span-4 space-y-4 text-left">
+            <a href="index.html" class="inline-flex items-center gap-2.5 group">
+              <img src="nexxusagencia.com.br/assets/logo-nexxus-white-original-blue.png" alt="Nexxus Agência Comercial" class="h-8 w-auto select-none transition-transform group-hover:scale-105">
             </a>
-            <a href="https://linkedin.com/company/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-500 flex items-center justify-center text-white transition-all group">
-              <svg class="w-5 h-5 text-white group-hover:text-nexxus-blue-400 transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-          </div>
-        </div>
 
-        <!-- Coluna 2: Navegação -->
-        <div class="md:col-span-3 space-y-4">
-          <h4 class="text-white font-normal text-xs uppercase font-mono tracking-wider">Navegação</h4>
-          <ul class="space-y-2.5 text-xs">
-            <li><a href="index-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Início</a></li>
-            <li><a href="sobre-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Sobre a Nexxus</a></li>
-            <li><a href="servicos-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Serviços</a></li>
-            <li><a href="contato-nexxus.html" class="hover:text-nexxus-blue-400 transition-colors">Contato</a></li>
-            <li><a href="#faq-contato" class="hover:text-nexxus-blue-400 transition-colors">FAQ Contato</a></li>
-          </ul>
-        </div>
+            <p class="text-xs text-slate-400 font-light leading-relaxed max-w-sm">
+              A Nexxus estrutura e opera o setor comercial da sua empresa com método proprietário, inteligência de dados e equipe dedicada (SDR, Hunter e Closer). Operação no ar em 20 dias.
+            </p>
 
-        <!-- Coluna 3: Contato -->
-        <div class="md:col-span-4 space-y-4">
-          <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider">CONTATO</h4>
-          <div class="space-y-4 text-xs">
-            <div class="flex items-center gap-3">
-              <iconify-icon icon="solar:letter-linear" class="text-nexxus-blue-500 text-lg shrink-0"></iconify-icon>
-              <a href="mailto:admin@nexxusagencia.com.br" class="hover:text-white transition-colors text-slate-300">admin@nexxusagencia.com.br</a>
+            <!-- Status Operacional -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] font-mono text-slate-300">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Operação Comercial B2B Ativa</span>
             </div>
-            <div class="flex items-start gap-3">
-              <iconify-icon icon="solar:map-point-linear" class="text-nexxus-blue-500 text-lg shrink-0 mt-0.5"></iconify-icon>
-              <div class="text-slate-300 font-light leading-relaxed">
-                <div>Edifício Capital Corporate Office</div>
-                <div>Ao lado do Shopping Morumbi</div>
-                <div>São Paulo/SP</div>
+
+            <!-- Canais Sociais -->
+            <div class="flex items-center gap-3 pt-2">
+              <a href="https://www.instagram.com/nexxus.inc/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-mint-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Instagram @nexxus.inc" aria-label="Instagram">
+                <iconify-icon icon="line-md:instagram" class="group-hover:text-nexxus-mint-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://linkedin.com/company/nexxus-ag%C3%AAncia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="LinkedIn Nexxus" aria-label="LinkedIn">
+                <iconify-icon icon="line-md:linkedin" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+              <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+um+diagn%C3%B3stico+comercial+com+a+Nexxus" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-emerald-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="WhatsApp Comercial" aria-label="WhatsApp">
+                <svg class="w-5 h-5 text-white group-hover:text-emerald-400 transition-colors fill-current" viewBox="0 0 24 24">
+                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23c-1.48 0-2.93-.39-4.19-1.15l-.3-.17l-3.12.82l.83-3.04l-.2-.32a8.2 8.2 0 0 1-1.26-4.38c.01-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.16 0-.43.06-.66.31c-.22.25-.87.86-.87 2.07c0 1.22.89 2.39 1 2.56c.14.17 1.76 2.67 4.25 3.73c.59.27 1.05.42 1.41.53c.59.19 1.13.16 1.56.1c.48-.07 1.46-.6 1.67-1.18s.21-1.07.15-1.18c-.07-.1-.23-.16-.48-.27c-.25-.14-1.47-.74-1.69-.82c-.23-.08-.37-.12-.56.12c-.16.25-.64.81-.78.97c-.15.17-.29.19-.53.07c-.26-.13-1.06-.39-2-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.12-.24-.01-.39.11-.5c.11-.11.27-.29.37-.44c.13-.14.17-.25.25-.41c.08-.17.04-.31-.02-.43c-.06-.11-.56-1.35-.77-1.84c-.2-.48-.4-.42-.56-.43c-.14 0-.3-.01-.47-.01"/>
+                </svg>
+              </a>
+              <a href="links.html" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-400 hover:bg-slate-800/80 flex items-center justify-center text-white text-lg transition-all hover:-translate-y-0.5 shadow-sm group" title="Central de Links" aria-label="Central de Links">
+                <iconify-icon icon="solar:link-circle-bold" class="group-hover:text-nexxus-blue-400 transition-colors"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Soluções Comerciais (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-500"></span>
+              <span>Soluções</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="servicos.html#terceirizacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Terceirização Comercial (BPO)</span></a></li>
+              <li><a href="servicos.html#estruturacao" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Estruturação de Vendas B2B</span></a></li>
+              <li><a href="servicos.html#mentoria" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Mentoria & Treinamento SDR/Closer</span></a></li>
+              <li><a href="servicos.html#tecnologia" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Implementação CRM Kommo</span></a></li>
+              <li><a href="index.html#metodo" class="hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:arrow-right-linear" class="text-slate-600 group-hover:text-nexxus-blue-400 group-hover:translate-x-0.5 transition-all"></iconify-icon><span>Metodologia em 6 Etapas</span></a></li>
+              <li><a href="javascript:void(0)" onclick="if(window.openRoiModal){window.openRoiModal()}else{location.href='index.html#roi-calculator'}" class="text-nexxus-mint-400 hover:text-white transition-colors flex items-center gap-1.5 group"><iconify-icon icon="solar:calculator-bold-duotone" class="text-nexxus-mint-400"></iconify-icon><span class="font-medium">Simulador de ROI B2B</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 3: Institucional & Conteúdo (lg:col-span-2) -->
+          <div class="lg:col-span-2 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-mint-400"></span>
+              <span>Institucional</span>
+            </h4>
+            <ul class="space-y-2.5 text-xs font-light">
+              <li><a href="index.html" class="hover:text-white transition-colors">Início</a></li>
+              <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre a Nexxus</a></li>
+              <li><a href="servicos.html" class="hover:text-white transition-colors">Serviços</a></li>
+              <li><a href="blog.html" class="hover:text-white transition-colors">Blog & Artigos</a></li>
+              <li><a href="index.html#diferenciais" class="hover:text-white transition-colors">Diferenciais</a></li>
+              <li><a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="links.html" class="hover:text-white transition-colors">Central de Links</a></li>
+              <li><a href="contato.html" class="hover:text-white transition-colors">Contato & Diagnóstico</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna 4: Contato, Sede & Atendimento (lg:col-span-3) -->
+          <div class="lg:col-span-3 space-y-4 text-left">
+            <h4 class="text-white font-normal text-xs uppercase font-heading tracking-wider flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-nexxus-blue-400"></span>
+              <span>Contato & Sede</span>
+            </h4>
+            <div class="space-y-3.5 text-xs">
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:letter-bold" class="text-nexxus-blue-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">E-mail Corporativo</div>
+                  <a href="mailto:admin@nexxusagencia.com.br" class="text-slate-300 hover:text-white transition-colors">admin@nexxusagencia.com.br</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <iconify-icon icon="solar:map-point-bold" class="text-nexxus-mint-400 text-base shrink-0 mt-0.5"></iconify-icon>
+                <div class="font-light text-slate-300 leading-relaxed">
+                  <div class="text-[10px] text-slate-500 uppercase font-mono">Sede Operacional</div>
+                  <div class="text-white font-medium">Edifício Capital Corporate Office</div>
+                  <div class="text-slate-400">Ao lado do Shopping Morumbi</div>
+                  <div class="text-slate-400">São Paulo / SP — Brasil</div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="contato.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-nexxus-blue-500/10 hover:bg-nexxus-blue-500/20 border border-nexxus-blue-500/30 text-nexxus-blue-400 hover:text-white text-xs font-semibold transition-all">
+                  <iconify-icon icon="solar:chat-round-dots-bold"></iconify-icon>
+                  <span>Solicitar Diagnóstico Comercial</span>
+                </a>
               </div>
             </div>
           </div>
+
+        </div>
+
+        <!-- Sub-Footer: Copyright com Ano Automático & Informações Legais -->
+        <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+            <div>
+              &copy; <span class="current-year">2026</span> Nexxus Agência Comercial. Todos os direitos reservados.
+            </div>
+            <span class="hidden sm:inline text-slate-700">•</span>
+            <div class="text-slate-400 font-mono text-[11px]">
+              Operação Comercial & Estruturação B2B
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 text-[11px] font-mono text-slate-400">
+            <span>São Paulo / SP</span>
+            <span class="text-slate-700">•</span>
+            <span class="text-slate-400">Alta Performance B2B</span>
+          </div>
         </div>
 
       </div>
 
-      <div class="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-slate-900 text-center md:flex md:justify-between md:text-left text-xs text-slate-500">
-        <div>© 2026 Nexxus. Todos os direitos reservados.</div>
-        <div class="mt-2 md:mt-0 font-mono">Soluções Comerciais B2B · São Paulo / SP</div>
-      </div>
+      <script>
+        (function() {
+          var y = new Date().getFullYear();
+          var els = document.querySelectorAll('.current-year');
+          for (var i = 0; i < els.length; i++) { els[i].textContent = y; }
+        })();
+      </script>
     </footer>
 
   </div>
@@ -867,7 +964,7 @@
 
         <div class="pt-2">
           <a id="roi-whatsapp-btn" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+fiz+uma+simula%C3%A7%C3%A3o+de+ROI+no+site+com+investimento+de+R%24+5000+e+gostaria+de+um+diagn%C3%B3stico" target="_blank" rel="noopener noreferrer" class="w-full py-4 rounded-full bg-nexxus-mint-500 hover:bg-nexxus-mint-400 text-slate-950 font-bold text-xs sm:text-sm uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-btn-mint">
-            <iconify-icon icon="line-md:whatsapp" class="text-lg"></iconify-icon>
+            <iconify-icon icon="mdi:whatsapp" class="text-lg"></iconify-icon>
             <span>QUERO ESSES RESULTADOS NA MINHA EMPRESA</span>
           </a>
         </div>
@@ -968,7 +1065,7 @@
     };
 
     // 1. Scroll Reveal Observer Engine
-    const observerOptions = { threshold: 0.05, rootMargin: '0px 0px -20px 0px' };
+    const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -40px 0px' };
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -978,61 +1075,9 @@
     }, observerOptions);
 
     function initReveals() {
-      document.querySelectorAll('.reveal, .reveal-3d-rotate').forEach(el => revealObserver.observe(el));
+      document.querySelectorAll('.reveal, .reveal-3d-rotate, .reveal-scale').forEach(el => revealObserver.observe(el));
     }
     document.addEventListener('DOMContentLoaded', initReveals);
-    setTimeout(initReveals, 100);
-
-    setTimeout(() => {
-      document.querySelectorAll('.reveal, .reveal-3d-rotate').forEach(el => el.classList.add('active'));
-    }, 500);
-
-    // 2. Custom Interactive Cursor Engine
-    (function initCustomCursor() {
-      const dot = document.getElementById('cursor-dot');
-      const ring = document.getElementById('cursor-ring');
-      const arrow = document.getElementById('cursor-arrow');
-      if (!dot || !ring) return;
-
-      let mouseX = window.innerWidth / 2;
-      let mouseY = window.innerHeight / 2;
-      let ringX = mouseX;
-      let ringY = mouseY;
-
-      window.addEventListener('pointermove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        dot.style.left = `${mouseX}px`;
-        dot.style.top = `${mouseY}px`;
-        if (arrow) {
-          arrow.style.left = `${mouseX}px`;
-          arrow.style.top = `${mouseY}px`;
-        }
-      });
-
-      function renderRing() {
-        ringX += (mouseX - ringX) * 0.18;
-        ringY += (mouseY - ringY) * 0.18;
-        ring.style.left = `${ringX}px`;
-        ring.style.top = `${ringY}px`;
-        requestAnimationFrame(renderRing);
-      }
-      renderRing();
-
-      const interactiveElements = document.querySelectorAll('header nav a, header nav button, .btn-conic-spin, a, button, [role="button"]');
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          if (arrow) arrow.classList.add('active');
-          dot.classList.add('menu-hover');
-          ring.classList.add('menu-hover');
-        });
-        el.addEventListener('mouseleave', () => {
-          if (arrow) arrow.classList.remove('active');
-          dot.classList.remove('menu-hover');
-          ring.classList.remove('menu-hover');
-        });
-      });
-    })();
 
     // 3. High-Resolution WebGL Starfield Shader Engine
     (function initWebGLStarfield() {

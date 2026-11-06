@@ -21,3 +21,24 @@ Thumbs.db
 *.zip
 _archive/
 scratch_backup/
+
+# Arquivos pesados não versionados
+*.pdf
+NEXXUS_Brandbook.pdf
+
+# Vídeos temporários / geração AI (pesados demais pro GitHub)
+gemini_generated_video_*.mp4
+0703.mp4
+0907\ \(1\).mp4
+Dobra-Voz-Clonada-Stanby.png
+
+# Imagens temporárias (nomes UUID/hash — não usados diretamente nos HTMLs)
+8163da31-006e-4adb-8377-8652129c822b.png
+43770cc7-3f2d-415e-aa83-5b909dcaca22.png
+magnific_delete-o-fundo_mEC3R8IhJQ.png
+
+# Pasta preview-cliente (gerada localmente pelos scripts)
+preview-cliente/
+
+# Design system (uso interno)
+design-system.html
