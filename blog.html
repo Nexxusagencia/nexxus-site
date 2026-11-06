@@ -343,8 +343,97 @@
           </button>
         </div>
 
+      
+        <!-- Botão Hambúrguer (Mobile) -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 hover:border-nexxus-blue-500 text-white transition-all ml-auto shrink-0"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu-drawer"
+          onclick="toggleMobileMenu()"
+        >
+          <span id="hamburger-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </span>
+          <span id="close-icon" class="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </span>
+        </button>
       </nav>
     </header>
+    <!-- ============================================================
+         MENU MOBILE DRAWER (hambúrguer)
+         ============================================================ -->
+    <div
+      id="mobile-menu-drawer"
+      class="fixed inset-x-0 top-0 z-40 lg:hidden translate-y-[-110%] transition-transform duration-300 ease-in-out"
+      aria-hidden="true"
+    >
+      <!-- Overlay backdrop -->
+      <div
+        id="mobile-menu-backdrop"
+        class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+        onclick="toggleMobileMenu()"
+      ></div>
+
+      <!-- Painel do menu -->
+      <div class="relative z-10 bg-slate-950 border-b border-slate-800/60 shadow-2xl px-5 pt-24 pb-8 flex flex-col gap-2">
+
+        <!-- Links de Navegação -->
+        <nav class="flex flex-col gap-1">
+          <a href="index.html"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:home-2-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Início
+          </a>
+          <a href="sobre.html"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:users-group-rounded-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Sobre a Nexxus
+          </a>
+          <a href="servicos.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:chart-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Serviços
+          </a>
+          <a href="blog.html"    class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:document-text-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Blog & Artigos
+          </a>
+          <a href="links.html"   class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:link-circle-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Central de Links
+          </a>
+          <a href="contato.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 font-medium text-sm transition-all">
+            <iconify-icon icon="solar:chat-round-dots-bold" class="text-nexxus-blue-400 text-lg shrink-0"></iconify-icon> Contato
+          </a>
+        </nav>
+
+        <!-- Divisor -->
+        <div class="border-t border-slate-800 my-2"></div>
+
+        <!-- CTA WhatsApp -->
+        <a
+          href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+um+diagn%C3%B3stico+comercial"
+          target="_blank" rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 font-bold text-sm transition-all"
+        >
+          <iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon>
+          Falar no WhatsApp
+        </a>
+
+        <a
+          href="contato.html"
+          class="flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-nexxus-blue-500/10 border border-nexxus-blue-500/30 text-nexxus-blue-400 hover:bg-nexxus-blue-500/20 font-bold text-sm transition-all"
+        >
+          <iconify-icon icon="solar:target-bold"></iconify-icon>
+          Solicitar Diagnóstico Comercial
+        </a>
+
+        <!-- Status operacional -->
+        <div class="flex items-center justify-center gap-2 pt-2 text-[11px] font-mono text-slate-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Operação Comercial B2B Ativa • São Paulo
+        </div>
+      </div>
+    </div>
 
     <main class="flex-1 space-y-12 md:space-y-16 py-8">
 
